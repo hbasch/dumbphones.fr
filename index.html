@@ -3,102 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="DUMB : un kit et des objets pour sortir du réflexe smartphone et des réseaux sociaux.">
-<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>DUMB dumbphones.fr</title>
+<title>DUMB · Sortir du réflexe smartphone</title>
+<meta name="description" content="DUMB aide à décrocher du smartphone : un guide pour passer au dumbphone, un comparateur de téléphones simples, une communauté francophone et un kit musette + carnet.">
+<link rel="canonical" href="https://dumbphones.fr/">
+<meta property="og:title" content="DUMB · Le téléphone peut attendre">
+<meta property="og:description" content="Guide, comparateur et communauté pour passer au dumbphone en France.">
+<meta property="og:url" content="https://dumbphones.fr/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=DM+Mono:wght@400;500&display=swap">
-<style>
-/* Layout : des bandes de couleur pleine largeur, texte très grand, comme des affiches empilées. Look unique assumé (pas de mode sombre). */
-:root{
-  --papier:#F3EEE3;
-  --encre:#1B1A17;
-  --rouge:#E4402B;
-  --jaune:#F4C22B;
-  --bleu:#2442C9;
-  --vert:#1F8F5F;
-  --rose:#EF8FB0;
-  --display:'Bricolage Grotesque',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --mono:'DM Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
-  color-scheme:light;
-}
-*{box-sizing:border-box}
-body{background:var(--papier);color:var(--encre);font-family:var(--display);font-size:18px;line-height:1.45}
-.band{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.in{max-width:1200px;margin:0 auto;padding-block:clamp(48px,8vw,104px)}
-h1,h2,h3{margin:0;text-wrap:balance;font-weight:800;letter-spacing:-.03em;line-height:.92}
-p{margin:0}
-.label{font-family:var(--mono);font-size:14px;letter-spacing:.08em;text-transform:uppercase}
-a{color:inherit;text-underline-offset:4px;text-decoration-thickness:2px}
-a:focus-visible,button:focus-visible{outline:3px solid var(--encre);outline-offset:3px}
-
-/* barre du haut */
-.top{background:var(--encre);color:var(--papier)}
-.top .in{padding-block:14px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-
-/* ouverture */
-.hero .in{display:flex;flex-direction:column;gap:clamp(24px,4vw,40px)}
-.logo{font-size:clamp(110px,26vw,340px);line-height:.78;letter-spacing:-.06em;position:relative;width:fit-content}
-.logo span{position:relative}
-.logo span::before{content:"DUMB";position:absolute;left:.04em;top:.04em;color:var(--rouge);z-index:-1}
-.logo{isolation:isolate}
-.hero h2{font-size:clamp(38px,6.4vw,84px);max-width:16ch}
-.hero p.lead{font-size:clamp(19px,2vw,24px);max-width:52ch}
-
-/* manifeste */
-.rouge{background:var(--rouge)}
-.manif{display:flex;flex-direction:column;gap:clamp(14px,2vw,22px);font-size:clamp(34px,5.6vw,74px);font-weight:800;letter-spacing:-.03em;line-height:1;list-style:none;margin:0;padding:0}
-
-/* kit */
-.kit .in{display:flex;flex-direction:column;gap:40px}
-.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;background:var(--encre);border:4px solid var(--encre)}
-.cols > div{background:var(--papier);padding:28px;display:flex;flex-direction:column;gap:12px;min-width:0}
-.cols h3{font-size:clamp(30px,3.4vw,44px);text-transform:uppercase}
-.pastille{width:52px;height:52px;border-radius:50%;border:3px solid var(--encre)}
-.sectitle{font-size:clamp(48px,8vw,108px);text-transform:uppercase}
-.chapeau{font-size:clamp(19px,2vw,24px);max-width:52ch}
-
-/* objets */
-.jaune{background:var(--jaune)}
-.objets .in{display:flex;flex-direction:column;gap:40px}
-.liste{list-style:none;margin:0;padding:0;border-top:4px solid var(--encre)}
-.liste li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr) auto;gap:8px 32px;align-items:baseline;padding-block:22px;border-bottom:4px solid var(--encre)}
-.liste strong{font-size:clamp(28px,3.6vw,46px);font-weight:800;letter-spacing:-.025em;line-height:1}
-.etat{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;border:2px solid var(--encre);border-radius:999px;padding:4px 12px;white-space:nowrap}
-.etat.plus-tard{border-style:dashed}
-
-/* guide */
-.bleu{background:var(--bleu);color:var(--papier)}
-.bleu .in{display:flex;flex-direction:column;gap:28px}
-.bleu a:focus-visible{outline-color:var(--papier)}
-
-/* fin */
-.fin .in{display:flex;flex-direction:column;gap:32px}
-.cta{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 24px;border:4px solid var(--encre);font-weight:800;font-size:20px;text-decoration:none;text-transform:uppercase;letter-spacing:.01em}
-.btn.plein{background:var(--encre);color:var(--papier)}
-.btn:hover{background:var(--rouge);color:var(--encre)}
-footer{background:var(--encre);color:var(--papier)}
-footer .in{padding-block:28px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-
-@media (max-width:760px){
-  .cols{grid-template-columns:minmax(0,1fr)}
-  .liste li{grid-template-columns:minmax(0,1fr) auto}
-  .liste li p{grid-column:1 / -1;grid-row:2}
-}
-@media (prefers-reduced-motion:no-preference){
-  .btn{transition:background .15s,color .15s}
-}
-</style>
-
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"DUMB","url":"https://dumbphones.fr/","sameAs":["https://www.reddit.com/r/Dumbphonefr/"]}</script>
 </head>
 <body>
-<div class="band top"><div class="in"><span class="label">dumbphones.fr</span><span class="label">Campagne Ulule bientôt</span></div></div>
 
-<section class="band hero"><div class="in">
+<header class="band top"><div class="in">
+  <a class="marque" href="/">DUMB</a>
+  <nav aria-label="Navigation principale">
+    <a href="/" aria-current="page">Le projet</a>
+    <a href="/comparateur/">Comparateur</a>
+    <a href="/guide/">Guide</a>
+    <a href="https://www.reddit.com/r/Dumbphonefr/">Communauté</a>
+  </nav>
+</div></header>
+
+<main>
+<section class="band hero"><div class="in stack">
   <h1 class="logo" aria-label="DUMB"><span>DUMB</span></h1>
   <h2>Le téléphone peut attendre. Toi, tu as mieux à faire.</h2>
-  <p class="lead">Un kit et des objets pour sortir du réflexe smartphone et des réseaux sociaux. Pas pour s'en priver : pour retrouver du temps, de l'attention, et l'envie de faire des choses de ses mains.</p>
+  <p class="chapeau">DUMB aide celles et ceux qui veulent sortir du réflexe smartphone. Pas pour se priver : pour retrouver du temps, de l'attention, et l'envie de faire des choses de ses mains.</p>
+  <div class="cta">
+    <a class="btn plein" href="/comparateur/">Trouver mon téléphone</a>
+    <a class="btn" href="/guide/">Lire le guide</a>
+  </div>
 </div></section>
 
 <section class="band rouge"><div class="in">
@@ -111,48 +49,69 @@ footer .in{padding-block:28px;display:flex;justify-content:space-between;gap:16p
   </ul>
 </div></section>
 
-<section class="band kit"><div class="in">
+<section class="band"><div class="in stack">
+  <p class="label">D'où ça vient</p>
+  <h2 class="sectitle">Trois ans avec un téléphone à touches</h2>
+  <div class="prose">
+    <p>DUMB est né d'une habitude devenue envahissante. Le téléphone qu'on sort sans y penser, dans la file d'attente, au feu rouge, au réveil, avant de dormir. Les applis sont conçues pour qu'on y revienne : c'est leur modèle économique, et elles le font très bien.</p>
+    <p>Hadrien vit avec un dumbphone, un téléphone simple qui appelle et envoie des SMS, la plupart du temps depuis trois ans. Il a ouvert <a href="https://www.reddit.com/r/Dumbphonefr/">r/Dumbphonefr</a> pour que les francophones qui font le même chemin puissent s'entraider : quel modèle acheter, comment garder sa banque, comment se repérer sans carte.</p>
+    <p>Avec Théo Mouzard et Valentine Gilbert, ils ont voulu aller plus loin qu'un forum. Rendre la sortie du smartphone désirable, et pas seulement raisonnable.</p>
+  </div>
+</div></section>
+
+<section class="band jaune"><div class="in">
+  <p class="grosse">Ce n'est pas un manque de volonté. C'est une machine faite pour te garder.</p>
+</div></section>
+
+<section class="band"><div class="in stack">
+  <p class="label">Ce qu'on construit</p>
+  <h2 class="sectitle">Un projet en trois temps</h2>
+  <div class="cols">
+    <div><span class="chiffre">1</span><h3>Partager</h3><p>Un guide pratique et un comparateur gratuits, ici, pour passer au dumbphone sans se planter. Et une communauté pour poser ses questions.</p></div>
+    <div><span class="chiffre">2</span><h3>Équiper</h3><p>Une musette, un carnet-guide et des stickers, cousus et imprimés par nous, financés par une campagne Ulule. De quoi partir sans écran.</p></div>
+    <div><span class="chiffre">3</span><h3>Concevoir</h3><p>À terme, notre propre téléphone : simple, pensé pour l'Europe, qui garde l'essentiel (appels, messages, cartes) sans le flux infini.</p></div>
+  </div>
+</div></section>
+
+<section class="band bleu"><div class="in stack">
   <p class="label">Le kit</p>
   <h2 class="sectitle">De quoi partir sans écran</h2>
-  <p class="chapeau">Un pack pensé pour les premières semaines sans smartphone, ou avec un dumbphone, un téléphone simple qui appelle et envoie des SMS.</p>
   <div class="cols">
-    <div><span class="pastille" style="background:var(--rouge)"></span><h3>La musette</h3><p>Un sac simple, en tissu, avec une étiquette oversized. Assez grand pour le carnet, un livre, le reste de la journée.</p></div>
-    <div><span class="pastille" style="background:var(--jaune)"></span><h3>Le carnet</h3><p>Des pages pour noter, dessiner, préparer ses trajets. Des témoignages, des citations, et de quoi comprendre ce que les écrans nous font.</p></div>
-    <div><span class="pastille" style="background:var(--vert)"></span><h3>Le crayon</h3><p>Pour tout ce que tu notais dans ton téléphone : les numéros, les idées, les listes, les rendez-vous.</p></div>
+    <div><span class="pastille" style="background:var(--rouge)"></span><h3>La musette</h3><p>Un sac simple en tissu, avec une étiquette oversized. Assez grand pour le carnet, un livre, le reste de la journée.</p></div>
+    <div><span class="pastille" style="background:var(--jaune)"></span><h3>Le carnet</h3><p>Le guide pour passer au dumbphone, des témoignages, et des pages pour noter, dessiner, préparer ses trajets.</p></div>
+    <div><span class="pastille" style="background:var(--vert)"></span><h3>Les stickers</h3><p>Pour le carnet, l'ordi, le téléphone qui reste à la maison. Et pour que ça se voie.</p></div>
+  </div>
+  <p class="chapeau">La campagne Ulule arrive bientôt, avec un nombre limité de kits.</p>
+</div></section>
+
+<section class="band"><div class="in stack">
+  <p class="label">Le temps gagné</p>
+  <h2 class="sectitle">Et après ?</h2>
+  <div class="prose">
+    <p>Ceux qui lâchent le smartphone le racontent souvent de la même façon : les premiers jours, la main cherche le téléphone dans la poche. Puis le vide se remplit. On lit, on dessine, on appelle quelqu'un, on regarde dehors.</p>
+    <p>C'est ce qui nous intéresse. Pas la privation : ce qui revient quand on arrête de scroller.</p>
   </div>
 </div></section>
 
-<section class="band jaune objets"><div class="in">
-  <p class="label">L'atelier</p>
-  <h2 class="sectitle">Des objets à tourner, appuyer, remonter</h2>
-  <p class="chapeau">Imprimés en 3D, dessinés en couleurs franches. Chacun reprend un usage du téléphone, à la main.</p>
-  <ul class="liste">
-    <li><strong>Le Rouleau de route</strong><p>Ton trajet sur une bande de papier, qui défile à la molette. Pour marcher sans Google Maps.</p><span class="etat">En prototype</span></li>
-    <li><strong>Le Répertoire rotatif</strong><p>Les numéros et adresses des proches, sur des fiches qu'on fait tourner.</p><span class="etat">En prototype</span></li>
-    <li><strong>Le Dé à consignes</strong><p>Douze faces, douze choses à faire au lieu de scroller pendant qu'on attend.</p><span class="etat">En prototype</span></li>
-    <li><strong>Les Tampons du carnet</strong><p>Dater, cocher les jours sans téléphone, garder trace de ce qu'on a fait.</p><span class="etat">En prototype</span></li>
-    <li><strong>Le Compteur d'envies</strong><p>Un clic à chaque fois que la main cherche le téléphone. Le chiffre du soir va dans le carnet.</p><span class="etat">En prototype</span></li>
-    <li><strong>Le Poste, le Mange-disque</strong><p>Podcasts et musique hors ligne, avec une aiguille, une molette, des disques à glisser.</p><span class="etat plus-tard">Plus tard</span></li>
-  </ul>
+<section class="band rose"><div class="in">
+  <p class="grosse">Le mode avion n'est pas une solution. C'est un aveu.</p>
 </div></section>
 
-<section class="band bleu"><div class="in">
-  <p class="label">Le guide</p>
-  <h2 class="sectitle">Passer au dumbphone</h2>
-  <p class="chapeau">Quel téléphone choisir, comment garder ses comptes bancaires et ses applis indispensables, comment prévenir son entourage. Un guide pratique, en français.</p>
-  <p class="label">En préparation</p>
-</div></section>
-
-<section class="band fin"><div class="in">
-  <h2 class="sectitle">Être là au lancement</h2>
-  <p class="chapeau">La campagne Ulule arrive bientôt, avec un nombre limité de kits. Suis le projet pour ne pas la rater.</p>
-  <div class="cta">
-    <a class="btn plein" href="[LIEN ULULE]">Voir la campagne</a>
-    <a class="btn" href="[LIEN INSTAGRAM]">Instagram</a>
+<section class="band"><div class="in stack">
+  <p class="label">Par où commencer</p>
+  <h2 class="sectitle">Trois portes d'entrée</h2>
+  <div class="cols">
+    <div><h3>Choisir un téléphone</h3><p>Une quinzaine de modèles comparés, de 0 € (garder le sien et le rendre ennuyeux) à 750 €.</p><a class="btn" href="/comparateur/">Comparer</a></div>
+    <div><h3>Préparer le passage</h3><p>Banque, WhatsApp, GPS, photos, double authentification : ce qu'il faut régler avant de sauter.</p><a class="btn" href="/guide/">Le guide</a></div>
+    <div><h3>En parler</h3><p>Questions, setups, défis de la semaine : la communauté francophone sur Reddit.</p><a class="btn" href="https://www.reddit.com/r/Dumbphonefr/">r/Dumbphonefr</a></div>
   </div>
-  <p>Contact : <span style="user-select:all">[ADRESSE DE CONTACT]</span></p>
 </div></section>
+</main>
 
-<footer class="band"><div class="in"><span class="label">DUMB · dumbphones.fr</span><span class="label">Fait en France, à la main</span></div></footer>
+<footer class="band"><div class="in">
+  <span class="label">DUMB · dumbphones.fr</span>
+  <nav class="label" aria-label="Pied de page" style="display:flex;gap:18px;flex-wrap:wrap"><a href="/comparateur/">Comparateur</a><a href="/guide/">Guide</a><a href="https://www.reddit.com/r/Dumbphonefr/">Reddit</a></nav>
+  <span class="label">Fait en France, à la main</span>
+</div></footer>
 </body>
 </html>

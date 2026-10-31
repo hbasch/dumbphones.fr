@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Comparateur de dumbphones 2026 · DUMB</title>
+<meta name="description" content="Comparateur de téléphones simples et minimalistes disponibles en France : prix, 4G, WhatsApp, GPS, appareil photo. Du Nokia à 50 € au Light Phone.">
+<link rel="canonical" href="https://dumbphones.fr/comparateur/">
+<meta property="og:title" content="Quel dumbphone choisir ? Le comparateur DUMB">
+<meta property="og:description" content="Une quinzaine de téléphones simples comparés, de 0 à 750 €.">
+<meta property="og:url" content="https://dumbphones.fr/comparateur/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="band top"><div class="in">
+  <a class="marque" href="/">DUMB</a>
+  <nav aria-label="Navigation principale">
+    <a href="/">Le projet</a>
+    <a href="/comparateur/" aria-current="page">Comparateur</a>
+    <a href="/guide/">Guide</a>
+    <a href="https://www.reddit.com/r/Dumbphonefr/">Communauté</a>
+  </nav>
+</div></header>
+
+<main>
+<section class="band jaune pagehead"><div class="in stack">
+  <p class="label">Comparateur</p>
+  <h1>Quel téléphone pour toi ?</h1>
+  <p class="chapeau">Choisis ce dont tu ne peux pas te passer. On te montre les téléphones qui le font, et rien de plus.</p>
+</div></section>
+
+<section class="band"><div class="in stack">
+  <form class="filtres" id="filtres" aria-label="Filtres">
+    <label for="budget">Budget max : <span id="budget-val">750 €</span>
+      <input type="range" id="budget" min="0" max="750" step="10" value="750">
+    </label>
+    <label for="forme">Forme
+      <select id="forme">
+        <option value="">Toutes</option>
+        <option value="touches">Téléphone à touches</option>
+        <option value="clapet">Clapet</option>
+        <option value="tactile">Écran tactile simple</option>
+        <option value="logiciel">Garder mon smartphone</option>
+      </select>
+    </label>
+    <label class="coche" for="f-whatsapp"><input type="checkbox" id="f-whatsapp"> J'ai besoin de WhatsApp</label>
+    <label class="coche" for="f-gps"><input type="checkbox" id="f-gps"> J'ai besoin d'une carte</label>
+    <label class="coche" for="f-photo"><input type="checkbox" id="f-photo"> J'ai besoin d'un appareil photo</label>
+    <label for="tri">Trier par
+      <select id="tri">
+        <option value="prix">Prix croissant</option>
+        <option value="prix-desc">Prix décroissant</option>
+        <option value="simple">Le plus simple d'abord</option>
+      </select>
+    </label>
+  </form>
+  <p class="compte" id="compte" aria-live="polite"></p>
+  <div class="cartes" id="cartes"></div>
+  <p class="note">Prix indicatifs en euros relevés fin octobre 2026, neufs, hors promotions ; « import » signifie vendu surtout hors de France. La prise en charge de WhatsApp sur les téléphones à touches change souvent : vérifie avant d'acheter. Les téléphones 4G doivent gérer la VoLTE (les appels en 4G) pour fonctionner chez tous les opérateurs français, la 2G et la 3G fermant progressivement.</p>
+</div></section>
+
+<section class="band bleu"><div class="in stack">
+  <p class="label">Avant d'acheter</p>
+  <h2 class="sectitle">Trois questions à se poser</h2>
+  <ol class="etapes">
+    <li><div><strong>De quoi as-tu vraiment besoin ?</strong>Note pendant une semaine ce que tu fais de ton téléphone. Souvent, il reste : appeler, écrire, se repérer, payer, prendre une photo.</div></li>
+    <li><div><strong>Qu'est-ce qui t'accroche ?</strong>Si ce sont les réseaux sociaux, un téléphone à touches règle le problème. Si c'est le travail ou les messages, un téléphone tactile simple suffit peut-être.</div></li>
+    <li><div><strong>Peux-tu garder un appareil à la maison ?</strong>Beaucoup gardent un vieux smartphone en Wi-Fi pour la banque ou WhatsApp, et sortent avec un dumbphone.</div></li>
+  </ol>
+  <div class="cta"><a class="btn" href="/guide/">Lire le guide complet</a></div>
+</div></section>
+</main>
+
+<footer class="band"><div class="in">
+  <span class="label">DUMB · dumbphones.fr</span>
+  <nav class="label" aria-label="Pied de page" style="display:flex;gap:18px;flex-wrap:wrap"><a href="/">Le projet</a><a href="/guide/">Guide</a><a href="https://www.reddit.com/r/Dumbphonefr/">Reddit</a></nav>
+  <span class="label">Fait en France, à la main</span>
+</div></footer>
+
+<script>
+const T=[
+ {n:"Ton smartphone actuel, en mode minimal",prix:0,affiche:"0 €",forme:"logiciel",s:3,wa:"oui",gps:"oui",photo:"oui",pour:"Essayer sans rien acheter : lanceur minimaliste, noir et blanc, limites d'applis.",lien:"/guide/#garder"},
+ {n:"Nokia 3210 4G",prix:50,affiche:"50 à 90 €",forme:"touches",s:1,wa:"non",gps:"non",photo:"oui",pour:"Le retour du classique : USB-C, Bluetooth, Snake. VoLTE à vérifier selon l'opérateur."},
+ {n:"Nokia 8210 4G",prix:60,affiche:"60 à 90 €",forme:"touches",s:1,wa:"non",gps:"non",photo:"oui",pour:"Lecteur MP3 et radio FM, veille de plusieurs semaines."},
+ {n:"Nokia 5710 XpressAudio",prix:70,affiche:"≈ 70 €",forme:"touches",s:1,wa:"non",gps:"non",photo:"oui",pour:"Pour la musique : écouteurs sans fil rangés dans le téléphone."},
+ {n:"Crosscall Core-S5",prix:70,affiche:"70 à 100 €",forme:"touches",s:1,wa:"non",gps:"non",photo:"?",pour:"Increvable : étanche, résistant aux chutes, garantie 5 ans. Marque française."},
+ {n:"Nokia 2660 Flip",prix:75,affiche:"75 à 95 €",forme:"clapet",s:1,wa:"non",gps:"non",photo:"oui",pour:"Le clapet le plus simple : grosses touches, écran externe, VoLTE."},
+ {n:"Nokia 2720 Flip",prix:100,affiche:"100 à 120 €",forme:"clapet",s:2,wa:"possible",gps:"basique",photo:"oui",pour:"Clapet sous KaiOS, avec quelques applis. Autonomie d'environ 27 jours en veille."},
+ {n:"Doro 6880",prix:130,affiche:"≈ 130 €",forme:"clapet",s:1,wa:"non",gps:"non",photo:"oui",pour:"Pensé pour les seniors : touche d'assistance, son clair."},
+ {n:"Qin F21 Pro",prix:130,affiche:"≈ 130 €",forme:"tactile",s:3,wa:"possible",gps:"oui",photo:"oui",pour:"Petit Android tactile avec clavier : tu installes seulement les applis dont tu as besoin."},
+ {n:"Punkt MP02",prix:300,affiche:"≈ 300 € (import)",forme:"touches",s:1,wa:"non",gps:"non",photo:"non",pour:"Design suisse, messagerie chiffrée, partage de connexion pour l'ordi."},
+ {n:"Mudita Kompakt",prix:439,affiche:"≈ 439 €",forme:"tactile",s:2,wa:"possible",gps:"oui",photo:"oui",pour:"Écran à encre électronique, Android sans Google, bouton qui coupe tout. Marque polonaise."},
+ {n:"Light Phone III",prix:700,affiche:"700 à 750 € (import)",forme:"tactile",s:2,wa:"non",gps:"oui",photo:"oui",pour:"Le plus épuré et le plus beau : appels, SMS, itinéraire, musique, photo. Rien d'autre."}
+];
+const $=id=>document.getElementById(id);
+const lab={oui:"oui",non:"non",possible:"possible",basique:"basique","?":"?"};
+function tag(nom,v){const cls=v==="oui"?"tag oui":v==="non"?"tag non":"tag";return `<span class="${cls}">${nom} : ${lab[v]}</span>`}
+const formes={touches:"Touches",clapet:"Clapet",tactile:"Tactile",logiciel:"Logiciel"};
+function rendu(){
+  const b=+$("budget").value;$("budget-val").textContent=b>=750?"750 € et plus":b+" €";
+  const f=$("forme").value,wa=$("f-whatsapp").checked,gps=$("f-gps").checked,ph=$("f-photo").checked,tri=$("tri").value;
+  let l=T.filter(t=>t.prix<=b&&(!f||t.forme===f)&&(!wa||t.wa!=="non")&&(!gps||t.gps!=="non")&&(!ph||t.photo==="oui"));
+  l.sort((a,c)=>tri==="prix-desc"?c.prix-a.prix:tri==="simple"?(a.s-c.s)||(a.prix-c.prix):a.prix-c.prix);
+  $("compte").textContent=l.length+(l.length>1?" téléphones correspondent":" téléphone correspond");
+  $("cartes").innerHTML=l.length?l.map(t=>`<article class="carte"><span class="tag">${formes[t.forme]}</span><h3>${t.n}</h3><p class="prix">${t.affiche}</p><div class="tags">${tag("WhatsApp",t.wa)}${tag("Carte",t.gps)}${tag("Photo",t.photo)}</div><p class="pour">${t.pour}</p>${t.lien?`<a href="${t.lien}">Comment faire</a>`:""}</article>`).join(""):`<div class="vide"><h3>Aucun téléphone ne coche tout.</h3><p>Essaie d'enlever un critère, ou garde un vieux smartphone à la maison pour ce besoin-là.</p></div>`;
+}
+["budget","forme","f-whatsapp","f-gps","f-photo","tri"].forEach(id=>$(id).addEventListener("input",rendu));
+$("filtres").addEventListener("submit",e=>e.preventDefault());
+rendu();
+</script>
+</body>
+</html>

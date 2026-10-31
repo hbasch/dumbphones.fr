@@ -120,3 +120,16 @@ footer a:focus-visible{outline-color:var(--papier)}
 @media (prefers-reduced-motion:no-preference){
   .btn{transition:background .15s,color .15s}
 }
+
+/* articles */
+.article{max-width:68ch;display:flex;flex-direction:column;gap:20px;font-size:19px}
+.article h2{font-size:clamp(30px,4vw,46px);margin-top:20px}
+.article h3{font-size:clamp(23px,2.6vw,30px);margin-top:8px}
+.article ul,.article ol{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:8px}
+.article table{border-collapse:collapse;width:100%;font-size:16px}
+.article th,.article td{border-bottom:2px solid var(--encre);padding:10px 8px;text-align:left;vertical-align:top}
+.tablewrap{overflow-x:auto}
+.liste-articles{list-style:none;margin:0;padding:0;border-top:4px solid var(--encre)}
+.liste-articles li{border-bottom:4px solid var(--encre);padding-block:22px;display:flex;flex-direction:column;gap:8px}
+.liste-articles a{font-size:clamp(26px,3.4vw,40px);font-weight:800;letter-spacing:-.025em;line-height:1.05;text-decoration:none}
+.liste-articles a:hover{text-decoration:underline}

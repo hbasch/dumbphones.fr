@@ -133,3 +133,20 @@ footer a:focus-visible{outline-color:var(--papier)}
 .liste-articles li{border-bottom:4px solid var(--encre);padding-block:22px;display:flex;flex-direction:column;gap:8px}
 .liste-articles a{font-size:clamp(26px,3.4vw,40px);font-weight:800;letter-spacing:-.025em;line-height:1.05;text-decoration:none}
 .liste-articles a:hover{text-decoration:underline}
+
+/* newsletter : popup et blocs d'inscription */
+.nl-pop{position:fixed;inset:0;z-index:50;background:rgba(27,26,23,.55);display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.nl-pop[hidden]{display:none}
+.nl-carte{position:relative;background:var(--jaune);color:var(--encre);border:4px solid var(--encre);box-shadow:10px 10px 0 var(--encre);max-width:520px;width:100%;padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:16px;max-height:100%;overflow:auto}
+.nl-carte h2{font-size:clamp(32px,5vw,48px)}
+.nl-x{position:absolute;top:8px;right:10px;background:none;border:0;font:inherit;font-size:34px;line-height:1;cursor:pointer;color:var(--encre);padding:4px 8px}
+.nl-pop form,.nl-bloc form{display:flex;flex-direction:column;gap:10px}
+.nl-pop label,.nl-bloc label{font-family:var(--mono);font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.nl-pop input,.nl-bloc input{font:inherit;font-size:18px;padding:12px 14px;border:3px solid var(--encre);background:var(--papier);color:var(--encre);width:100%;min-width:0}
+.nl-pop .btn,.nl-bloc .btn{cursor:pointer;font:inherit;font-weight:800}
+.nl-mini{font-size:14px}
+.nl-ok{font-weight:800;font-size:20px}
+.nl-bloc .ligne{display:flex;gap:10px;flex-wrap:wrap}
+.nl-bloc .ligne input{flex:1 1 260px}
+.liens-pile{display:flex;flex-direction:column;gap:12px;max-width:560px}
+.liens-pile .btn{justify-content:center;text-align:center;padding-block:10px}

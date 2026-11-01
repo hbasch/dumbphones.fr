@@ -2,7 +2,7 @@
 Prendre le premier sujet non coché, puis le cocher. Ajouter de nouveaux sujets en bas quand la liste se vide.
 
 - [x] Téléphone sans internet pour un ado : lequel choisir en 2026
-- [ ] Garder WhatsApp sans smartphone : toutes les options
+- [x] Garder WhatsApp sans smartphone : toutes les options
 - [ ] Passer au dumbphone et garder sa banque : ce que proposent les banques françaises
 - [ ] Se repérer sans GPS : cartes papier, préparation de trajet, astuces
 - [ ] La double authentification sans smartphone : clés de sécurité, SMS, codes de secours

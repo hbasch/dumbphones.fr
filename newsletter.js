@@ -3,7 +3,7 @@
    Pour l'activer : coller l'adresse du formulaire Brevo (Contacts > Formulaires > Partager > lien du formulaire,
    du type https://xxxx.sibforms.com/serve/XXXX) entre les guillemets. */
 (function () {
-  var BREVO_ACTION = "";
+  var BREVO_ACTION = "https://8cad817e.sibforms.com/serve/MUIFAFEEKQY0DOWu9faI24Neh9X5X2MprYni1nPnfgpwoNAEiVCDtZ2LvBugpW4VL-azPelAmrmoXchTC2gFnSryCehsIezXTi3oaEy-V9o49Sl10ZMa_Iamtso2G_F-wdFXz_Ld30Sa7jzPiK32WpuEd2M-5IFXrgPLJVTj2jCkXghBGzCZYBJFOo5yoRLG3Se5B2v6s_3GUQzdZw==";
   var DELAI_MS = 20000;          // popup après 20 s sur la page
   var SCROLL = 0.6;              // ou après 60 % de la page lue
   var PAUSE_JOURS = 14;          // ne revient pas pendant 14 jours si on la ferme

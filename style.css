@@ -137,8 +137,19 @@ footer a:focus-visible{outline-color:var(--papier)}
 /* newsletter : popup et blocs d'inscription */
 .nl-pop{position:fixed;inset:0;z-index:50;background:rgba(27,26,23,.55);display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
 .nl-pop[hidden]{display:none}
-.nl-carte{position:relative;background:var(--jaune);color:var(--encre);border:4px solid var(--encre);box-shadow:10px 10px 0 var(--encre);max-width:520px;width:100%;padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:16px;max-height:100%;overflow:auto}
-.nl-carte h2{font-size:clamp(32px,5vw,48px)}
+.nl-carte{position:relative;background:var(--papier);color:var(--encre);border:4px solid var(--encre);box-shadow:12px 12px 0 var(--rouge);max-width:760px;width:100%;display:grid;grid-template-columns:240px minmax(0,1fr);max-height:100%;overflow:auto}
+.nl-couv{background:var(--bleu);display:flex;align-items:center;justify-content:center;padding:32px 24px;position:relative;overflow:hidden}
+.nl-couv::before{content:"";position:absolute;width:150px;height:200px;background:var(--jaune);border:3px solid var(--encre);transform:rotate(-6deg) translate(10px,6px);box-shadow:6px 6px 0 var(--encre)}
+.nl-couv span{position:relative;transform:rotate(-6deg)}
+.nl-couv{flex-direction:column;gap:10px;text-align:left}
+.nl-couv-pdf{font-family:var(--mono);font-size:12px;letter-spacing:.1em;background:var(--rouge);color:var(--encre);padding:2px 8px;align-self:center}
+.nl-couv-t{font-weight:800;font-size:26px;line-height:.95;letter-spacing:-.03em;text-transform:uppercase;max-width:120px;color:var(--encre)}
+.nl-couv-s{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--encre)}
+.nl-corps{padding:clamp(24px,4vw,36px);display:flex;flex-direction:column;gap:14px}
+.nl-liste{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:16px}
+.nl-liste li::before{content:"→ ";font-weight:800;color:var(--rouge)}
+@media (max-width:620px){.nl-carte{grid-template-columns:minmax(0,1fr)}.nl-couv{padding:18px;min-height:0}.nl-couv::before{display:none}.nl-couv span{transform:none}.nl-couv{flex-direction:row;justify-content:flex-start;background:var(--jaune);border-bottom:4px solid var(--encre)}.nl-couv-t{max-width:none;font-size:20px}.nl-couv-s{display:none}}
+.nl-carte h2{font-size:clamp(28px,4vw,40px)}
 .nl-x{position:absolute;top:8px;right:10px;background:none;border:0;font:inherit;font-size:34px;line-height:1;cursor:pointer;color:var(--encre);padding:4px 8px}
 .nl-pop form,.nl-bloc form{display:flex;flex-direction:column;gap:10px}
 .nl-pop label,.nl-bloc label{font-family:var(--mono);font-size:14px;letter-spacing:.08em;text-transform:uppercase}

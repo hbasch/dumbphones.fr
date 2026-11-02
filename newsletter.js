@@ -28,7 +28,7 @@
     fetch(BREVO_ACTION + (BREVO_ACTION.indexOf("?") < 0 ? "?" : "&") + "isAjax=1", { method: "POST", body: data, mode: "no-cors" })
       .then(function () {
         ecrire({ inscrit: true });
-        ok.hidden = false; form.hidden = true;
+        ok.hidden = false; form.hidden = true; var mini = form.parentNode.querySelector('.nl-mini'); if (mini) mini.hidden = true;
         if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: "newsletter-inscription", event: true });
       })
       .catch(function () {
@@ -53,16 +53,19 @@
     '<div class="nl-pop" role="dialog" aria-modal="true" aria-labelledby="nl-titre" hidden>' +
       '<div class="nl-carte">' +
         '<button class="nl-x" type="button" aria-label="Fermer">×</button>' +
-        '<p class="label">Offert</p>' +
-        '<h2 id="nl-titre">Le guide pour lâcher ton smartphone, en PDF</h2>' +
-        '<p>Inscris-toi à la newsletter DUMB : un mail tous les 15 jours, et le guide à imprimer dès ton inscription.</p>' +
-        '<form novalidate>' +
-          '<label for="nl-email-pop">Ton e-mail</label>' +
-          '<input id="nl-email-pop" type="email" name="EMAIL" autocomplete="email" placeholder="toi@exemple.fr" required>' +
-          '<button class="btn plein" type="submit">Recevoir le guide</button>' +
-        '</form>' +
-        '<p class="nl-ok" role="status" hidden>Presque fini : ouvre le mail de confirmation, le guide t\'attend juste après.</p>' +
-        '<p class="nl-mini">Un mail tous les 15 jours, désinscription en un clic. Ton adresse sert seulement à DUMB, elle n\'est jamais revendue.</p>' +
+        '<div class="nl-couv" aria-hidden="true"><span class="nl-couv-pdf">PDF</span><span class="nl-couv-t">Passer au dumbphone</span><span class="nl-couv-s">Le guide DUMB</span></div>' +
+        '<div class="nl-corps">' +
+          '<p class="label">Offert</p>' +
+          '<h2 id="nl-titre">Le guide pour lâcher ton smartphone</h2>' +
+          '<ul class="nl-liste"><li>Garder sa banque, WhatsApp et le GPS</li><li>Choisir le bon téléphone simple</li><li>Rendre son smartphone ennuyeux</li></ul>' +
+          '<form novalidate>' +
+            '<label for="nl-email-pop">Ton e-mail</label>' +
+            '<input id="nl-email-pop" type="email" name="EMAIL" autocomplete="email" placeholder="toi@exemple.fr" required>' +
+            '<button class="btn plein" type="submit">Recevoir le guide</button>' +
+          '</form>' +
+          '<p class="nl-ok" role="status" hidden>Regarde ta boîte mail : un clic pour confirmer, et le guide est à toi.</p>' +
+          '<p class="nl-mini">Puis un mail tous les 15 jours. Désinscription en un clic, adresse jamais revendue.</p>' +
+        '</div>' +
       '</div>' +
     '</div>';
   var wrap = document.createElement("div"); wrap.innerHTML = html;

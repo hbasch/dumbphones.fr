@@ -143,7 +143,7 @@ footer a:focus-visible{outline-color:var(--papier)}
 .nl-couv span{position:relative;transform:rotate(-6deg)}
 .nl-couv{flex-direction:column;gap:10px;text-align:left}
 .nl-couv-pdf{font-family:var(--mono);font-size:12px;letter-spacing:.1em;background:var(--rouge);color:var(--encre);padding:2px 8px;align-self:center}
-.nl-couv-t{font-weight:800;font-size:26px;line-height:.95;letter-spacing:-.03em;text-transform:uppercase;max-width:120px;color:var(--encre)}
+.nl-couv-t{font-weight:800;font-size:21px;line-height:.95;letter-spacing:-.03em;text-transform:uppercase;max-width:120px;color:var(--encre)}
 .nl-couv-s{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--encre)}
 .nl-corps{padding:clamp(24px,4vw,36px);display:flex;flex-direction:column;gap:14px}
 .nl-liste{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:16px}

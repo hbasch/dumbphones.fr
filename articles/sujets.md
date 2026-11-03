@@ -4,7 +4,7 @@ Prendre le premier sujet non coché, puis le cocher. Ajouter de nouveaux sujets 
 - [x] Téléphone sans internet pour un ado : lequel choisir en 2026
 - [x] Garder WhatsApp sans smartphone : toutes les options
 - [x] Passer au dumbphone et garder sa banque : ce que proposent les banques françaises
-- [ ] Se repérer sans GPS : cartes papier, préparation de trajet, astuces
+- [x] Se repérer sans GPS : cartes papier, préparation de trajet, astuces
 - [ ] La double authentification sans smartphone : clés de sécurité, SMS, codes de secours
 - [ ] VoLTE : pourquoi ton vieux téléphone risque de ne plus marcher avec la fin de la 2G et de la 3G
 - [ ] Nokia 3210 4G ou Nokia 2660 Flip : lequel choisir ?

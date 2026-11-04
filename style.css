@@ -260,9 +260,9 @@ footer .label{border-top:0;padding-top:0}
 .etagere .lettres{margin:0;font-family:var(--affiche);font-size:clamp(84px,15vw,190px);line-height:.89;color:var(--encre);transform:translateY(.14em)}
 .etagere.vide .lettres{color:var(--bic);-webkit-text-stroke:3px var(--encre)}
 .etagere .accroche{margin:0;font-family:var(--mono);font-size:clamp(17px,2vw,22px);color:var(--papier);max-width:none;font-weight:400;line-height:1.3}
-.croquis{filter:url(#croquis);flex:none;height:auto}
-.etagere .croquis{width:clamp(56px,9vw,116px)}
-.etagere.basse .croquis{width:clamp(90px,11vw,150px)}
+.croquis{flex:none;height:auto}
+.etagere .croquis{height:88%;width:auto;align-self:flex-end;margin-bottom:2px}
+.etagere.basse .croquis{height:clamp(64px,8vw,92px);align-self:center;margin:0}
 @media (max-width:620px){.etagere .croquis.option{display:none}}
 
 .cols > div:nth-child(3n+2){background:var(--kraft)}

@@ -5,11 +5,14 @@
   --encre:#1F1D1A;
   --gris:#5A554C;
   --bic:#4A62A6;
+  --ocre:#D9AE4B;
+  --sauge:#8FA47E;
+  --vieuxrose:#DFA5A2;
   --rouge:#4A62A6;
-  --jaune:#E6DCCB;
+  --jaune:#D9AE4B;
   --bleu:#4A62A6;
-  --vert:#4A62A6;
-  --rose:#E6DCCB;
+  --vert:#8FA47E;
+  --rose:#DFA5A2;
   --display:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
   --mono:'Courier Prime','Courier New',ui-monospace,monospace;
   --affiche:'Bowlby One','Archivo Black',Impact,sans-serif;
@@ -182,33 +185,38 @@ h1,h2,h3{font-weight:700;letter-spacing:0;line-height:1.15}
 .top a:hover,.top a[aria-current="page"]{text-decoration:underline wavy var(--bic);text-decoration-thickness:2px;text-underline-offset:5px}
 .top a:focus-visible{outline-color:var(--encre)}
 .marque{font-family:var(--mono);font-weight:700;font-size:20px;letter-spacing:.28em}
-.bandeau{margin:0;padding:9px 16px;text-align:center;font-family:var(--mono);font-style:italic;font-size:15px;border-bottom:1px solid var(--encre);background:var(--papier)}
+.bandeau{margin:0;padding:14px 16px;text-align:center;font-family:var(--mono);font-size:clamp(16px,1.8vw,20px);border-bottom:2px solid var(--encre);background:var(--ocre);display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 18px}
+.bandeau strong{font-family:var(--affiche);font-weight:400;font-size:clamp(20px,2.4vw,28px);line-height:1;text-transform:uppercase}
+.bandeau span{background:var(--encre);color:var(--papier);padding:3px 10px;font-size:.85em}
 
 .pagehead h1{font-family:var(--affiche);font-weight:400;font-size:clamp(52px,9vw,112px);line-height:.89;text-transform:none}
 .hero h2,.hero h1.accroche{font-family:var(--mono);font-weight:700;font-size:clamp(30px,4.4vw,48px);line-height:1.14;max-width:22ch}
 
-.rouge,.jaune,.rose{background:var(--kraft);border-block:2px solid var(--encre)}
-.bleu,.vert{background:var(--bic);color:var(--papier);border-block:2px solid var(--encre)}
-.vert a:focus-visible{outline-color:var(--papier)}
+.rouge{background:var(--kraft);border-block:2px solid var(--encre)}
+.jaune{background:var(--ocre);border-block:2px solid var(--encre)}
+.rose{background:var(--vieuxrose);border-block:2px solid var(--encre)}
+.vert{background:var(--sauge);color:var(--encre);border-block:2px solid var(--encre)}
+.bleu{background:var(--bic);color:var(--papier);border-block:2px solid var(--encre)}
 .encre{border-block:2px solid var(--encre)}
 .grosse{font-family:var(--affiche);font-weight:400;font-size:clamp(34px,5.4vw,64px);line-height:.95;letter-spacing:0}
 .manif{font-family:var(--affiche);font-weight:400;letter-spacing:0;font-size:clamp(30px,4.6vw,58px)}
 
 .cols{gap:24px;background:none;border:0}
 .cols > div{border:2px solid var(--encre);box-shadow:6px 6px 0 var(--encre);padding:30px}
-.bleu .cols > div,.vert .cols > div{box-shadow:6px 6px 0 var(--encre)}
+
 .cols h3{font-family:var(--mono);font-weight:700;font-size:clamp(21px,2vw,25px);text-transform:none;line-height:1.25}
 .chiffre{font-family:var(--affiche);font-weight:400;font-size:clamp(52px,6vw,72px);letter-spacing:0;line-height:.89}
 
 .etapes{border-top:1px solid currentColor}
 .etapes li{border-bottom:1px solid currentColor;padding-block:18px}
 .etapes li::before{font-family:var(--affiche);font-size:30px;line-height:1;padding-top:0;color:var(--bic);-webkit-text-stroke:1px var(--encre)}
-.bleu .etapes li::before,.vert .etapes li::before{color:var(--papier)}
+.bleu .etapes li::before{color:var(--papier)}
+.jaune .etapes li::before,.vert .etapes li::before,.rose .etapes li::before{color:var(--papier)}
 .etapes strong{font-family:var(--mono);font-weight:700;font-size:clamp(20px,2vw,24px);letter-spacing:0;line-height:1.25}
 
 .btn{min-height:48px;padding:0 28px;border:1px solid currentColor;font-weight:500;font-size:15px;letter-spacing:.06em}
 .btn.plein{box-shadow:6px 6px 0 var(--bic)}
-.bleu .btn.plein,.vert .btn.plein{box-shadow:6px 6px 0 var(--encre)}
+.bleu .btn.plein,.vert .btn.plein,.jaune .btn.plein,.rose .btn.plein{box-shadow:6px 6px 0 var(--encre)}
 .btn:hover{background:var(--bic);color:var(--papier);border-color:var(--encre)}
 
 details{border-bottom:1px solid var(--encre)}
@@ -256,3 +264,7 @@ footer .label{border-top:0;padding-top:0}
 .etagere .croquis{width:clamp(56px,9vw,116px)}
 .etagere.basse .croquis{width:clamp(90px,11vw,150px)}
 @media (max-width:620px){.etagere .croquis.option{display:none}}
+
+.cols > div:nth-child(3n+2){background:var(--kraft)}
+.cartes .carte:nth-child(4n+2){background:var(--kraft)}
+.tag.oui{background:var(--sauge);border-color:var(--encre);color:var(--encre)}

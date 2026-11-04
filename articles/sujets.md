@@ -1,11 +1,16 @@
 # Sujets d'articles (file d'attente)
 Prendre le premier sujet non coché, puis le cocher. Ajouter de nouveaux sujets en bas quand la liste se vide.
 
+À chaque nouvel article, mettre aussi à jour : le bloc ARTICLES-ACCUEIL de /index.html (les 3 plus récents, le plus récent en haut, même format que la liste de /articles/), et /sitemap.xml (nouvelle URL + date). Titre de page : la question que les gens tapent dans Google, avec « 2026 » quand ça a du sens.
+
 - [x] Téléphone sans internet pour un ado : lequel choisir en 2026
 - [x] Garder WhatsApp sans smartphone : toutes les options
 - [x] Passer au dumbphone et garder sa banque : ce que proposent les banques françaises
 - [x] Se repérer sans GPS : cartes papier, préparation de trajet, astuces
 - [x] La double authentification sans smartphone : clés de sécurité, SMS, codes de secours
+- [ ] Les meilleurs dumbphones de 2026 en France : notre sélection par usage
+- [ ] Téléphone à touches avec WhatsApp en 2026 : ceux qui marchent encore
+- [ ] Téléphone portable sans internet : lequel choisir en 2026
 - [ ] VoLTE : pourquoi ton vieux téléphone risque de ne plus marcher avec la fin de la 2G et de la 3G
 - [ ] Nokia 3210 4G ou Nokia 2660 Flip : lequel choisir ?
 - [ ] Rendre son iPhone ennuyeux en 10 minutes

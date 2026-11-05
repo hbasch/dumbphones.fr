@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Test : comment décrocher du smartphone selon ta vie · DUMB</title>
+<meta name="description" content="Cinq questions pour savoir comment décrocher du smartphone selon ta situation : téléphone rendu ennuyeux, vieux smartphone, téléphone simple. Gratuit, 1 minute.">
+<link rel="canonical" href="https://dumbphones.fr/test/">
+<meta property="og:title" content="Test : comment décrocher du smartphone selon ta vie">
+<meta property="og:description" content="Cinq questions, une minute, et une façon de décrocher qui tient compte de WhatsApp, de ta banque, de ton GPS et de ton budget.">
+<meta property="og:url" content="https://dumbphones.fr/test/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Bowlby+One&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="/style.css?v=8">
+<script data-goatcounter="https://dumbphones.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script src="/newsletter.js?v=4" defer></script>
+<style>
+.quiz{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(24px,5vw,72px);align-items:start}
+@media (max-width:820px){.quiz{grid-template-columns:1fr}.scene{order:-1;max-width:170px;margin:0 auto}}
+.progress{display:flex;gap:6px;margin-bottom:22px}
+.progress span{flex:1;height:8px;border:2px solid var(--encre);background:transparent}
+.progress span.on{background:var(--encre)}
+.q h2{font-size:clamp(32px,5vw,56px);margin-bottom:22px;max-width:18ch}
+.q .aide{color:var(--gris);margin:-10px 0 20px;max-width:52ch}
+.choix{display:grid;gap:10px;max-width:640px}
+.choix button{display:flex;gap:14px;align-items:center;text-align:left;width:100%;min-height:64px;padding:12px 18px;border:4px solid var(--encre);background:var(--papier);color:var(--encre);font:inherit;font-weight:600;font-size:19px;cursor:pointer;box-shadow:5px 5px 0 var(--encre);transition:transform .12s,box-shadow .12s,background .12s}
+.choix button:hover{background:var(--kraft)}
+.choix button:active{transform:translate(4px,4px);box-shadow:1px 1px 0 var(--encre)}
+.choix button[aria-pressed="true"]{background:var(--ocre)}
+.choix button .k{font-family:var(--mono);font-size:14px;border:2px solid var(--encre);border-radius:50%;width:30px;height:30px;display:inline-grid;place-items:center;flex:none}
+.choix button small{display:block;font-weight:400;font-size:15px;color:var(--gris)}
+.nav-q{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.retour{background:none;border:0;font:inherit;text-decoration:underline;text-underline-offset:4px;cursor:pointer;color:var(--encre);padding:8px 0}
+.res h2{font-size:clamp(36px,6vw,72px);max-width:16ch;margin:6px 0 18px}
+.res .cartes-res{display:grid;gap:4px;background:var(--encre);border:4px solid var(--encre);margin:22px 0}
+.res .cartes-res > div{background:var(--papier);padding:16px 18px}
+.res .cartes-res h3{font-size:22px;letter-spacing:-.02em;margin-bottom:6px}
+.res ol{padding-left:22px;display:flex;flex-direction:column;gap:8px;max-width:62ch}
+.fade{animation:fade .35s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+/* la scène */
+.scene svg{width:100%;height:auto;overflow:visible}
+.tuile{transition:transform .9s cubic-bezier(.5,-.3,.7,1),opacity .9s;transform-box:fill-box;transform-origin:center}
+.tuile.tombe{opacity:0}
+.ecran-txt{opacity:0;transition:opacity .6s .5s}
+.fini .ecran-txt{opacity:1}
+.tel{transform-box:fill-box;transform-origin:50% 100%;animation:balance 4s ease-in-out infinite}
+@keyframes balance{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.legende{font-family:var(--mono);font-size:14px;text-align:center;margin-top:10px;min-height:2.6em}
+@media (prefers-reduced-motion:reduce){.tel{animation:none}.tuile{transition:opacity .2s}.fade{animation:none}}
+</style>
+</head>
+<body>
+<svg aria-hidden="true" width="0" height="0" style="position:absolute"><defs><filter id="riso" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="3" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0.96  0 0 0 0 0.94  0 0 0 0 0.9  0 0 0 12 -7.6" result="dots"/><feComposite in="dots" in2="SourceAlpha" operator="in" result="d2"/><feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="d2"/></feMerge></filter><filter id="main" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9"/><feDisplacementMap in="SourceGraphic" scale="2.6"/></filter></defs></svg>
+
+<header class="band top"><div class="in">
+  <a class="marque" href="/">DUMB</a>
+  <nav aria-label="Navigation principale">
+    <a href="/">Le projet</a>
+    <a href="/comparateur/">Quel téléphone pour toi</a>
+    <a href="/guide/">Guide</a>
+    <a href="/articles/">Articles</a>
+    <a href="/parents/">Parents</a>
+    <a href="/test/" aria-current="page">Le test</a>
+    <a href="https://www.reddit.com/r/Dumbphonefr/">Communauté</a>
+  </nav>
+</div></header>
+
+<main>
+<section class="band jaune pagehead"><div class="in stack">
+  <p class="label">Le test · 1 minute</p>
+  <h1 style="font-size:clamp(44px,8vw,110px)">Comment décrocher, selon ta vie</h1>
+  <p class="chapeau">Cinq questions. À la fin, une façon de faire qui tient compte de ce dont tu as vraiment besoin : WhatsApp, la banque, le GPS, ton budget.</p>
+</div></section>
+
+<section class="band"><div class="in">
+  <div class="quiz">
+    <div id="zone" aria-live="polite"></div>
+    <div class="scene" aria-hidden="true">
+      <svg viewBox="0 0 200 300" id="scene">
+        <g class="tel">
+          <g filter="url(#riso)">
+            <rect x="30" y="20" width="140" height="260" rx="22" fill="#dfa5a2"/>
+            <rect x="42" y="44" width="116" height="200" rx="6" fill="#f3ede2"/>
+          </g>
+          <g id="tuiles" filter="url(#riso)"></g>
+          <g class="ecran-txt" font-family="Courier Prime, monospace" font-size="13" fill="#1f1d1a" id="ecran"></g>
+          <g filter="url(#main)" fill="none" stroke="#1f1d1a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="30" y="20" width="140" height="260" rx="22"/>
+            <rect x="42" y="44" width="116" height="200" rx="6"/>
+            <path d="M88 32h24"/>
+            <circle cx="100" cy="262" r="8"/>
+          </g>
+        </g>
+      </svg>
+      <p class="legende" id="legende">Un smartphone, plein comme d'habitude.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="band encre"><div class="in stack">
+  <p class="label">Et après le test ?</p>
+  <h2 class="sectitle">Essaie pour de vrai</h2>
+  <div class="prose"><p>Du 1er au 7 février 2027, on organise un défi public sans smartphone : 3 heures, 24 heures ou 7 jours, au choix. Les inscriptions ouvrent le 5 janvier. Pour être prévenu, et recevoir le guide, inscris-toi à la lettre.</p></div>
+  <div class="cta"><a class="btn" href="/newsletter/">La lettre DUMB</a><a class="btn" href="https://www.reddit.com/r/Dumbphonefr/">r/Dumbphonefr</a></div>
+</div></section>
+</main>
+
+<footer class="band"><div class="in">
+  <span class="label">DUMB · dumbphones.fr</span>
+  <nav class="label" aria-label="Pied de page" style="display:flex;gap:18px;flex-wrap:wrap"><a href="/">Le projet</a><a href="/comparateur/">Quel téléphone pour toi</a><a href="/guide/">Guide</a><a href="/test/">Le test</a><a href="https://www.reddit.com/r/Dumbphonefr/">Reddit</a></nav>
+  <a class="label" href="https://fr.ulule.com/dumb-pour-une-alternative-au-smartphone/">Campagne Ulule : être prévenu</a>
+</div></footer>
+
+<script>
+(function(){
+// ---------- la scène : 12 applis qui tombent une à une ----------
+var COUL=["#4a62a6","#d9ae4b","#8fa47e","#1f1d1a","#dfa5a2","#e6dccb"];
+var tuiles=document.getElementById("tuiles"), ns="http://www.w3.org/2000/svg", T=[];
+for(var r=0;r<4;r++)for(var c=0;c<3;c++){
+  var t=document.createElementNS(ns,"rect");
+  t.setAttribute("x",54+c*34);t.setAttribute("y",58+r*44);t.setAttribute("width",24);t.setAttribute("height",24);t.setAttribute("rx",6);
+  t.setAttribute("fill",COUL[(r*3+c*2)%COUL.length]);t.setAttribute("stroke","#1f1d1a");t.setAttribute("stroke-width","2");
+  t.setAttribute("class","tuile");tuiles.appendChild(t);T.push(t);
+}
+var ordre=[4,0,8,2,10,6,1,11,3,9,5,7];
+function vider(n){ // n = nombre d'applis à faire tomber
+  ordre.forEach(function(i,k){var el=T[i];
+    if(k<n){el.classList.add("tombe");el.style.transform="translate("+((i%3-1)*30)+"px,"+(260-Math.floor(i/3)*44)+"px) rotate("+((i%2?1:-1)*(40+i*7))+"deg)";}
+    else{el.classList.remove("tombe");el.style.transform="";}
+  });
+}
+function ecran(lignes,legende){
+  var g=document.getElementById("ecran");g.innerHTML="";
+  lignes.forEach(function(l,i){var t=document.createElementNS(ns,"text");t.setAttribute("x",56);t.setAttribute("y",86+i*26);t.textContent=l;g.appendChild(t);});
+  document.getElementById("scene").classList.toggle("fini",lignes.length>0);
+  if(legende)document.getElementById("legende").textContent=legende;
+}
+
+// ---------- les questions ----------
+var Q=[
+ {id:"qui",titre:"C'est pour qui ?",choix:[["moi","Pour moi"],["enfant","Pour mon enfant ou mon ado","son premier téléphone, ou moins d'écran"],["senior","Pour un parent âgé","grosses touches, fin de la 2G"]]},
+ {id:"loin",titre:"Jusqu'où tu veux aller ?",choix:[["moins","Moins scroller","je garde mon smartphone, mais il m'accroche trop"],["sortir","Sortir sans smartphone","il reste à la maison pour les démarches"],["tout","Tout lâcher","je veux vivre avec un téléphone simple"]]},
+ {id:"tiroir",titre:"Tu as un ancien smartphone dans un tiroir ?",aide:"Même lent, même avec l'écran un peu fêlé, tant qu'il s'allume.",choix:[["oui","Oui"],["non","Non"]]},
+ {id:"budget",titre:"Tu veux dépenser combien ?",choix:[["0","Rien du tout"],["100","Jusqu'à 100 € environ"],["plus","Plus, si ça vaut le coup"]]},
+ {id:"besoins",titre:"Sans quoi tu ne peux pas vivre ?",aide:"Plusieurs réponses possibles. Sois honnête : c'est ce qui fait tenir sur la durée.",multi:true,choix:[["whatsapp","WhatsApp et les groupes"],["banque","L'appli de ma banque"],["gps","Le GPS"],["auth","Les codes de connexion (double authentification)"],["photo","Les photos"],["musique","La musique et les podcasts"],["billets","Les billets de train et de transport"]]}
+];
+var rep={}, etape=0, zone=document.getElementById("zone");
+function suite(){ // quelles questions restent selon les réponses
+  if(rep.qui&&rep.qui!=="moi") return Q.slice(0,1);
+  if(rep.loin==="moins") return [Q[0],Q[1],Q[4]];
+  return Q;
+}
+function barre(){var n=suite().length;var h='<div class="progress" aria-hidden="true">';for(var i=0;i<5;i++)h+='<span class="'+(i<etape?"on":"")+'"></span>';return h+"</div>";}
+function afficher(){
+  var qs=suite();
+  if(etape>=qs.length){resultat();return;}
+  var q=qs[etape], sel=rep[q.id]||(q.multi?[]:null);
+  var h=barre()+'<div class="q fade"><p class="label">Question '+(etape+1)+'</p><h2>'+q.titre+'</h2>'+(q.aide?'<p class="aide">'+q.aide+'</p>':'')+'<div class="choix" role="group" aria-label="'+q.titre+'">';
+  q.choix.forEach(function(c,i){var on=q.multi?sel.indexOf(c[0])>=0:false;
+    h+='<button type="button" data-v="'+c[0]+'" aria-pressed="'+on+'"><span class="k">'+String.fromCharCode(65+i)+'</span><span>'+c[1]+(c[2]?'<small>'+c[2]+'</small>':'')+'</span></button>';});
+  h+='</div><div class="nav-q">'+(q.multi?'<button class="btn plein" type="button" id="ok">'+(sel.length?"Voir mon résultat":"Rien de tout ça")+'</button>':'')+(etape>0?'<button class="retour" type="button" id="retour">Revenir</button>':'')+'</div></div>';
+  zone.innerHTML=h;
+  zone.querySelectorAll(".choix button").forEach(function(b){b.addEventListener("click",function(){
+    var v=b.dataset.v;
+    if(q.multi){var a=rep[q.id]||[];var k=a.indexOf(v);if(k>=0)a.splice(k,1);else a.push(v);rep[q.id]=a;b.setAttribute("aria-pressed",k<0);document.getElementById("ok").textContent=a.length?"Voir mon résultat":"Rien de tout ça";}
+    else{rep[q.id]=v;etape++;vider(Math.min(9,etape*3));legende(etape);afficher();}
+  });});
+  var ok=document.getElementById("ok"); if(ok)ok.addEventListener("click",function(){rep.besoins=rep.besoins||[];etape++;afficher();});
+  var rt=document.getElementById("retour"); if(rt)rt.addEventListener("click",function(){etape--;vider(etape*3);legende(etape);afficher();});
+  var h2=zone.querySelector("h2"); if(h2&&etape>0){h2.setAttribute("tabindex","-1");h2.focus({preventScroll:true});}
+}
+function legende(n){var L=["Un smartphone, plein comme d'habitude.","Quelques applis tombent déjà.","Ça se vide.","Il ne reste presque plus rien.","Encore un peu.","Voilà."];document.getElementById("legende").textContent=L[Math.min(n,5)];ecran([]);}
+
+// ---------- les résultats ----------
+var A={whatsapp:"/articles/whatsapp-sans-smartphone/",banque:"/articles/banque-sans-smartphone/",gps:"/articles/se-reperer-sans-gps/",auth:"/articles/double-authentification-sans-smartphone/"};
+function conseils(maison){ // maison = un smartphone reste disponible à la maison
+  var b=rep.besoins||[], out=[];
+  var S={
+    whatsapp:maison?["WhatsApp","Il reste sur le smartphone de la maison. Sur l'ordinateur, WhatsApp Web te permet de répondre tranquillement le soir.",A.whatsapp]:["WhatsApp","C'est le point le plus dur. Soit un téléphone simple sous Android où WhatsApp s'installe, soit prévenir tes proches que tu passes au SMS.",A.whatsapp],
+    banque:maison?["La banque","L'appli reste sur le smartphone de la maison, pour valider les paiements en ligne.",A.banque]:["La banque","Demande à ta banque un code par SMS ou un boîtier. Toutes ne le proposent pas : vérifie avant de lâcher le smartphone.",A.banque],
+    gps:["Le GPS","Regarde le trajet avant de partir, note les grandes étapes, garde un plan papier. On s'en passe plus vite qu'on croit.",A.gps],
+    auth:["Les codes de connexion","Les codes par SMS marchent sur n'importe quel téléphone. Pour le reste, une clé de sécurité ou une appli sur l'ordinateur. Note tes codes de secours.",A.auth],
+    photo:["Les photos","La plupart des téléphones simples ont un petit appareil photo. Un compact d'occasion ou un jetable change le rapport aux photos : on en prend moins, on les regarde plus.","/guide/#faq"],
+    musique:["La musique et les podcasts","Un lecteur MP3 fait très bien l'affaire, et certains téléphones à touches lisent les MP3 et la radio FM. Les podcasts se téléchargent depuis l'ordinateur.","/guide/#faq"],
+    billets:["Les billets","Imprime-les la veille, ou garde une carte de transport physique. Beaucoup de réseaux l'acceptent encore.","/guide/#faq"]
+  };
+  b.forEach(function(k){if(S[k])out.push(S[k]);});
+  return out;
+}
+function bloc(items){if(!items.length)return"";return'<div class="cartes-res">'+items.map(function(s){return'<div><h3>'+s[0]+'</h3><p>'+s[1]+' <a href="'+s[2]+'">En savoir plus</a></p></div>';}).join("")+"</div>";}
+function resultat(){
+  var titre,txt,etapes,liens,lignes,leg,maison=false,b=rep.besoins||[];
+  if(rep.qui==="enfant"){
+    titre="Un premier téléphone simple";txt="Pour un enfant ou un ado, un téléphone simple permet d'appeler et d'être joint, sans réseaux sociaux. Le plus important, c'est de le choisir avec lui.";
+    etapes=["Liste avec lui ce dont il a vraiment besoin : appeler, envoyer des SMS, écouter de la musique ?","Choisis un modèle 4G avec VoLTE, pour que les appels marchent encore après la fin de la 2G.","Mettez-vous d'accord sur les règles avant de le lui donner, et montre l'exemple."];
+    liens='<a class="btn plein" href="/parents/">La page parents</a><a class="btn" href="/articles/telephone-sans-internet-ado/">Les modèles pour un ado</a>';
+    lignes=["Appels","SMS","Musique"];leg="Un téléphone pour appeler et être joint.";
+  } else if(rep.qui==="senior"){
+    titre="Un téléphone simple, qui marchera encore demain";txt="Avec la fin de la 2G, beaucoup de vieux téléphones vont perdre les appels. Il faut un modèle 4G qui gère la VoLTE, c'est-à-dire les appels sur le réseau 4G.";
+    etapes=["Vérifie si son téléphone actuel est concerné : icône réseau, référence, réglage VoLTE.","Choisis grosses touches, son fort, touche d'assistance et socle de charge.","Règle-le avant de le donner : contacts, sonnerie, touche d'assistance testée."];
+    liens='<a class="btn plein" href="/articles/telephone-senior/">Le guide senior</a><a class="btn" href="/comparateur/">Le comparateur</a>';
+    lignes=["Appels","SMS","Assistance"];leg="De grosses touches, et c'est tout.";
+  } else if(rep.loin==="moins"){
+    maison=true;titre="Ton smartphone, rendu ennuyeux";txt="Pas besoin de changer de téléphone. On enlève ce qui accroche : les couleurs, les notifications, les applis à flux infini. Coût : 0 €.";
+    etapes=["Remplace l'écran d'accueil par un lanceur minimaliste (Android) ou une seule page épurée (iPhone).","Passe l'écran en noir et blanc et coupe les notifications, sauf les appels, les SMS et les proches.","Sors le téléphone de la chambre. Un réveil à 10 € suffit."];
+    liens='<a class="btn plein" href="/guide/#garder">Les réglages pas à pas</a><a class="btn" href="/guide/">Le guide</a>';
+    lignes=["Appels","SMS","Plans","Photo"];leg="Le même téléphone, en noir et blanc.";
+  } else if(rep.loin==="sortir"&&rep.tiroir==="oui"){
+    maison=true;titre="Ton vieux smartphone, pour sortir";txt="Ta carte SIM passe dans ton ancien smartphone, rendu ennuyeux : appels, SMS, plans, musique, photo, rien d'autre. Ton smartphone actuel reste à la maison en Wi-Fi pour la banque, WhatsApp et les démarches. Coût : 0 €.";
+    etapes=["Réinitialise le vieux smartphone et n'y installe que l'essentiel.","Mets-y un lanceur minimaliste et passe-le en noir et blanc.","Le smartphone actuel reste à la maison, branché, comme un ordinateur."];
+    liens='<a class="btn plein" href="/guide/#options">Les trois façons de faire</a><a class="btn" href="/guide/#garder">Rendre un téléphone ennuyeux</a>';
+    lignes=["Appels","SMS","Plans","Musique"];leg="Le vieux téléphone sort, l'autre reste à la maison.";
+  } else if(rep.budget==="0"){
+    maison=rep.loin==="sortir";titre="Commence par ton smartphone, rendu ennuyeux";txt="Sans budget et sans vieux téléphone, le plus simple est de commencer avec celui que tu as. Si ça tient un mois, tu sauras si un téléphone simple vaut l'achat.";
+    etapes=["Rends ton smartphone ennuyeux : lanceur minimaliste, noir et blanc, notifications coupées.","Laisse-le à la maison pour une soirée, puis une journée.","Garde un œil sur les annonces d'occasion : un téléphone à touches y coûte souvent peu."];
+    liens='<a class="btn plein" href="/guide/#garder">Les réglages pas à pas</a><a class="btn" href="/comparateur/">Le comparateur</a>';
+    lignes=["Appels","SMS","Plans"];leg="On commence avec ce qu'on a.";
+  } else {
+    var android=b.indexOf("whatsapp")>=0||b.indexOf("gps")>=0;
+    maison=rep.loin==="sortir"||rep.tiroir==="oui";
+    if(android){titre="Un petit Android, rendu ennuyeux";txt="Tu as besoin de WhatsApp ou d'une carte : un téléphone à touches ne suffira pas. Un Android basique ou un petit téléphone avec clavier, où tu n'installes que l'essentiel, fait le compromis.";lignes=["Appels","SMS","WhatsApp","Plans"];}
+    else{titre="Un téléphone à touches";txt="Appels, SMS, réveil, et presque rien d'autre. C'est la version la plus radicale, et souvent la plus reposante.";lignes=["Appels","SMS","Réveil"];}
+    etapes=["Filtre le comparateur selon tes besoins et ton budget.","Vérifie la VoLTE (les appels en 4G) avec ton opérateur avant d'acheter.",(maison?"Garde ton smartphone actuel à la maison pour la banque et les démarches.":"Prévois une solution pour la banque et les codes de connexion avant de lâcher le smartphone.")+" Puis fais un essai de 30 jours."];
+    liens='<a class="btn plein" href="/comparateur/">Le comparateur</a><a class="btn" href="/guide/">Le guide</a>';
+    leg=android?"Quatre applis, pas une de plus.":"Des touches, et le calme.";
+  }
+  var c=conseils(maison);
+  zone.innerHTML=barre().replace(/class=""/g,'class="on"')+'<div class="res fade"><p class="label">Ton résultat</p><h2 tabindex="-1">'+titre+'</h2><div class="prose"><p>'+txt+'</p></div>'
+    +'<h3 style="font-size:26px;margin-top:28px">Par où commencer</h3><ol>'+etapes.map(function(e){return"<li>"+e+"</li>";}).join("")+"</ol>"
+    +(c.length?'<h3 style="font-size:26px;margin-top:28px">Ce qui te retient, et comment faire</h3>'+bloc(c):"")
+    +'<div class="cta" style="margin-top:24px">'+liens+'</div>'
+    +'<div class="nav-q"><button class="btn" type="button" id="partager">Partager le test</button><button class="retour" type="button" id="refaire">Refaire le test</button></div></div>';
+  vider(12);ecran(lignes,leg);
+  zone.querySelector("h2").focus({preventScroll:false});
+  document.getElementById("refaire").addEventListener("click",function(){rep={};etape=0;vider(0);legende(0);afficher();});
+  document.getElementById("partager").addEventListener("click",function(){
+    var d={title:"Comment décrocher, selon ta vie",text:"J'ai fait le test de DUMB : "+titre+". Et toi ?",url:"https://dumbphones.fr/test/"};
+    var btn=this;
+    if(navigator.share){navigator.share(d).catch(function(){});}
+    else if(navigator.clipboard){navigator.clipboard.writeText(d.url).then(function(){btn.textContent="Lien copié";});}
+  });
+  if(window.goatcounter&&window.goatcounter.count){try{window.goatcounter.count({path:"test-resultat-"+titre.toLowerCase().replace(/[^a-z]+/g,"-"),title:titre,event:true});}catch(e){}}
+}
+afficher();
+})();
+</script>
+</body>
+</html>

@@ -11,7 +11,7 @@
 
   if (!BREVO_ACTION) return;
   var path = location.pathname;
-  var pageSansPopup = /^\/(merci|liens|newsletter)\//.test(path);
+  var pageSansPopup = /^\/(merci|liens|newsletter|test)\//.test(path);
 
   function lire() { try { return JSON.parse(localStorage.getItem(CLE) || "{}"); } catch (e) { return {}; } }
   function ecrire(v) { try { localStorage.setItem(CLE, JSON.stringify(v)); } catch (e) {} }

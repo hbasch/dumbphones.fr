@@ -9,7 +9,7 @@ Prendre le premier sujet non coché, puis le cocher. Ajouter de nouveaux sujets 
 - [x] Se repérer sans GPS : cartes papier, préparation de trajet, astuces
 - [x] La double authentification sans smartphone : clés de sécurité, SMS, codes de secours
 - [x] Idées cadeaux de Noël pour décrocher : objets, livres, téléphones simples (à publier avant fin novembre)
-- [ ] Téléphone pour senior : lequel choisir en 2026 (grosses touches, VoLTE, touche d'urgence)
+- [x] Téléphone pour senior : lequel choisir en 2026 (grosses touches, VoLTE, touche d'urgence)
 - [ ] Les meilleurs dumbphones de 2026 en France : notre sélection par usage
 - [ ] Téléphone à touches avec WhatsApp en 2026 : ceux qui marchent encore
 - [ ] Téléphone portable sans internet : lequel choisir en 2026

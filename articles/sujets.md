@@ -11,7 +11,7 @@ Prendre le premier sujet non coché, puis le cocher. Ajouter de nouveaux sujets 
 - [x] Idées cadeaux de Noël pour décrocher : objets, livres, téléphones simples (à publier avant fin novembre)
 - [x] Téléphone pour senior : lequel choisir en 2026 (grosses touches, VoLTE, touche d'urgence)
 - [x] Les meilleurs dumbphones de 2026 en France : notre sélection par usage
-- [ ] Téléphone à touches avec WhatsApp en 2026 : ceux qui marchent encore
+- [x] Téléphone à touches avec WhatsApp en 2026 : ceux qui marchent encore
 - [ ] Téléphone portable sans internet : lequel choisir en 2026
 - [ ] VoLTE : pourquoi ton vieux téléphone risque de ne plus marcher avec la fin de la 2G et de la 3G
 - [ ] Nokia 3210 4G ou Nokia 2660 Flip : lequel choisir ?

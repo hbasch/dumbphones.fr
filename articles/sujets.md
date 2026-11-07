@@ -12,7 +12,7 @@ Prendre le premier sujet non coché, puis le cocher. Ajouter de nouveaux sujets 
 - [x] Téléphone pour senior : lequel choisir en 2026 (grosses touches, VoLTE, touche d'urgence)
 - [x] Les meilleurs dumbphones de 2026 en France : notre sélection par usage
 - [x] Téléphone à touches avec WhatsApp en 2026 : ceux qui marchent encore
-- [ ] Téléphone portable sans internet : lequel choisir en 2026
+- [x] Téléphone portable sans internet : lequel choisir en 2026
 - [ ] VoLTE : pourquoi ton vieux téléphone risque de ne plus marcher avec la fin de la 2G et de la 3G
 - [ ] Nokia 3210 4G ou Nokia 2660 Flip : lequel choisir ?
 - [ ] Rendre son iPhone ennuyeux en 10 minutes

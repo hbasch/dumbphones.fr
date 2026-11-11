@@ -19,7 +19,7 @@ Prendre le premier sujet non coché, puis le cocher. Ajouter de nouveaux sujets 
 - [x] Rendre son Android ennuyeux : les meilleurs lanceurs minimalistes
 - [x] Un réveil pour sortir le téléphone de la chambre
 - [x] Écouter de la musique et des podcasts sans smartphone
-- [ ] 30 jours sans smartphone : à quoi s'attendre semaine par semaine
+- [x] 30 jours sans smartphone : à quoi s'attendre semaine par semaine
 - [ ] Mudita Kompakt, Light Phone III, Minimal Phone : les téléphones minimalistes haut de gamme comparés
 - [ ] Les billets de train et transports sans smartphone en France
 - [ ] Ce que dit la recherche sur les écrans et l'attention

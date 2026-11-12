@@ -21,7 +21,7 @@
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Bowlby+One&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap">
-<link rel="stylesheet" href="/style.css?v=10">
+<link rel="stylesheet" href="/style.css?v=11">
 <script data-goatcounter="https://dumbphones.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <script src="/newsletter.js?v=3" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://dumbphones.fr/"},{"@type":"ListItem","position":2,"name":"Le kit","item":"https://dumbphones.fr/kit/"}]}</script>
@@ -41,68 +41,74 @@
   </nav>
 </div></header>
 <main>
-<section class="band rose pagehead"><div class="in stack a-croquis">
-  <img class="croquis-tete" src="/img/croquis/musette.svg" alt="" width="160" height="160">
-  <nav class="ariane" aria-label="Fil d'Ariane"><a href="/">Accueil</a> <span aria-hidden="true">›</span> <span aria-current="page">Le kit</span></nav>
-  <p class="label">Série n°1 · 10 exemplaires</p>
-  <h1>Le kit DUMB</h1>
-  <p class="chapeau">De quoi sortir sans écran. La musette est cousue à la main, une par une, à la commande. Chaque exemplaire est numéroté.</p>
-</div></section>
+<svg aria-hidden="true" width="0" height="0" style="position:absolute"><defs><filter id="riso" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="1" seed="3" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0.96  0 0 0 0 0.94  0 0 0 0 0.9  0 0 0 12 -7.6" result="dots"/><feComposite in="dots" in2="SourceAlpha" operator="in" result="d2"/><feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="d2"/></feMerge></filter><filter id="main" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="9"/><feDisplacementMap in="SourceGraphic" scale="2.6"/></filter></defs></svg>
+<p class="bandeau-test">Paiement en mode test : aucune carte réelle n'est débitée. Pour essayer, carte 4242 4242 4242 4242, n'importe quelle date future et n'importe quel code.</p>
 
-<section class="band"><div class="in stack">
-  <p class="label">Ce qu'il y a dedans</p>
-  <h2 class="sectitle">De quoi sortir sans écran</h2>
-  <div class="cols">
-    <div><h3>La musette</h3><p>Un sac simple en tissu, cousu à la main et numéroté. Assez grand pour le carnet, un livre, le reste de la journée.</p></div>
-    <div><h3>Le carnet</h3><p>Le guide pour passer au dumbphone, et des pages pour noter, dessiner, préparer ses trajets.</p></div>
-    <div><h3>La pochette anti-ondes</h3><p>Comme celles des lycées : le téléphone glissé dedans ne reçoit plus rien, ni appel ni notification, tant que la pochette est fermée.</p></div>
+<section class="band kit-tete"><div class="in">
+  <div class="kit-titre">
+    <p class="label">Série n°1 · 10 exemplaires numérotés</p>
+    <h1>Le kit DUMB</h1>
+    <p class="chapeau">De quoi sortir sans écran. Une musette cousue à la main, un carnet, une pochette qui coupe le téléphone du monde.</p>
   </div>
+  <div class="kit-image"><svg aria-hidden="true" class="kit-visuel" width="160" height="108" viewBox="0 0 160 108"><g filter="url(#riso)"><path d="M38 40C40 6 120 6 122 40" fill="none" stroke="#e6dccb" stroke-width="7"/><path d="M16 40h128l-8 62H24z" fill="#e6dccb"/><path d="M16 40h128l-10 30c-34 10-74 10-108 0z" fill="#8fa47e"/><rect x="70" y="58" width="20" height="16" fill="#d9ae4b"/><rect x="112" y="76" width="22" height="13" fill="#dfa5a2"/></g><g filter="url(#main)" transform="translate(-3 -2)" fill="none" stroke="#1f1d1a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M38 40C40 6 120 6 122 40M45 40C47 14 113 14 115 40" stroke-width="1.8"/><path d="M16 40h128l-8 62H24z"/><path d="M16 40c4 10 6 20 10 30 34 10 74 10 108 0 4-10 6-20 10-30"/><path d="M30 64c32 8 68 8 100 0" stroke-dasharray="3 5" stroke-width="1.4"/><rect x="70" y="58" width="20" height="16"/><path d="M80 62v8"/><path d="M30 94c32 3 68 3 100 0" stroke-dasharray="3 5" stroke-width="1.4"/><rect x="112" y="76" width="22" height="13"/><path d="M116 82h14" stroke-width="1.4"/></g></svg></div>
 </div></section>
 
-<section class="band jaune" id="commander"><div class="in stack">
-  <p class="label">Commander</p>
-  <h2 class="sectitle">Deux packs</h2>
-  <!-- PACKS : prix dans data-prix, lien Stripe dans data-stripe. Sans lien, le bouton renvoie vers la liste d'attente. -->
-  <div class="cartes">
-    <article class="carte">
-      <h3>Pack 1</h3>
-      <p class="prix" data-prix="">Prix bientôt</p>
-      <ul class="liste-kit"><li>La musette numérotée</li><li>Le carnet</li><li>La pochette anti-ondes</li></ul>
-      <a class="btn plein" href="#attente" data-stripe="">Être prévenu</a>
-    </article>
-    <article class="carte">
-      <h3>Pack 2</h3>
-      <p class="prix" data-prix="">Prix bientôt</p>
-      <ul class="liste-kit"><li>Tout le pack 1</li><li>Le stylo DUMB</li><li>La planche de stickers</li></ul>
-      <a class="btn plein" href="#attente" data-stripe="">Être prévenu</a>
-    </article>
+<section class="band"><div class="in kit-grille">
+
+  <div class="kit-projet prose">
+    <h2>Ce qu'il y a dans le kit</h2>
+    <ul class="kit-contenu">
+      <li><strong>La musette.</strong> Un sac simple en tissu, cousu à la main et numéroté. Assez grand pour le carnet, un livre, le reste de la journée.</li>
+      <li><strong>Le carnet.</strong> Le guide pour passer au dumbphone, et des pages pour noter, dessiner, préparer ses trajets.</li>
+      <li><strong>La pochette anti-ondes.</strong> Comme celles des lycées : le téléphone glissé dedans ne reçoit plus rien, ni appel ni notification, tant qu'elle est fermée.</li>
+    </ul>
+
+    <h2>Comment ça se passe</h2>
+    <ol class="kit-etapes">
+      <li>Tu choisis ton pack à droite.</li>
+      <li>Sur la page de paiement, tu ajoutes si tu veux des options (stylo, stickers, pochette ou carnet en plus) et tu choisis la livraison.</li>
+      <li>On coud ta musette et on la numérote.</li>
+      <li>Le kit part environ un mois après ta commande.</li>
+    </ol>
+
+    <h2>Bon à savoir</h2>
+    <p>Fabriqué à la commande, en petite série. Livraison en France uniquement. Paiement par carte bancaire, Apple Pay ou Google Pay. Tu as 14 jours après réception pour changer d'avis.</p>
+    <p>Une question ? Écris sur <a href="https://www.reddit.com/r/Dumbphonefr/">r/Dumbphonefr</a> ou réponds à la newsletter.</p>
   </div>
-  <h3 class="sous-titre">À ajouter au moment de payer</h3>
-  <!-- OPTIONS : prix dans data-prix. Elles s'ajoutent sur la page de paiement Stripe. -->
-  <ul class="options-kit">
-    <li><span>Le stylo DUMB</span><span data-prix="">prix bientôt</span></li>
-    <li><span>La planche de stickers</span><span data-prix="">prix bientôt</span></li>
-    <li><span>Une pochette anti-ondes en plus</span><span data-prix="">prix bientôt</span></li>
-    <li><span>Un carnet en plus</span><span data-prix="">prix bientôt</span></li>
-  </ul>
-  <p class="note">Fabriqué à la commande : compte environ un mois entre ta commande et la livraison. Livraison en France, en point relais ou à domicile, frais affichés au moment de payer. Paiement sécurisé par carte bancaire, Apple Pay ou Google Pay. Tu as 14 jours après réception pour changer d'avis.</p>
-</div></section>
 
-<section class="band nl-bloc" id="attente" hidden><div class="in stack">
-  <p class="label">Liste d'attente</p>
-  <h2 class="sectitle">Être prévenu de l'ouverture</h2>
-  <p class="chapeau">Un mail le jour où la série ouvre. Et le guide en PDF tout de suite.</p>
-  <form novalidate>
-    <label for="nl-email-kit">Ton e-mail</label>
-    <div class="ligne"><input id="nl-email-kit" type="email" name="EMAIL" autocomplete="email" placeholder="toi@exemple.fr" required><button class="btn plein" type="submit">Me prévenir</button></div>
-  </form>
-  <p class="nl-ok" role="status" hidden>Presque fini : ouvre le mail de confirmation.</p>
-  <p class="nl-mini">Désinscription en un clic. Ton adresse sert seulement à DUMB, elle n'est jamais revendue.</p>
+  <aside class="kit-colonne" aria-label="Choisir un pack">
+    <p class="kit-colonne-titre">Choisis ton pack</p>
+
+    <a class="recompense" href="https://buy.stripe.com/test_dRm28l2Cn3pn6Tp8uxco000" rel="noopener">
+      <span class="r-prix">49 €</span>
+      <span class="r-nom">Pack 1</span>
+      <span class="r-liste">Musette numérotée · carnet · pochette anti-ondes</span>
+      <span class="r-infos"><span>Livraison estimée : environ 1 mois</span><span>Série de 10</span></span>
+      <span class="r-bouton">Je choisis ce pack</span>
+    </a>
+
+    <a class="recompense" href="https://buy.stripe.com/test_fZueV75OzcZXcdJ269co001" rel="noopener">
+      <span class="r-badge">Le plus complet</span>
+      <span class="r-prix">59 €</span>
+      <span class="r-nom">Pack 2</span>
+      <span class="r-liste">Tout le pack 1 · stylo DUMB · planche de stickers</span>
+      <span class="r-infos"><span>Livraison estimée : environ 1 mois</span><span>Série de 10</span></span>
+      <span class="r-bouton">Je choisis ce pack</span>
+    </a>
+
+    <div class="kit-options">
+      <p class="kit-colonne-titre">À ajouter au moment de payer</p>
+      <ul>
+        <li><span>Stylo DUMB</span><span>4 €</span></li>
+        <li><span>Planche de stickers</span><span>5 €</span></li>
+        <li><span>Pochette anti-ondes en plus</span><span>15 €</span></li>
+        <li><span>Carnet en plus</span><span>12 €</span></li>
+      </ul>
+      <p class="kit-port">Livraison en France : point relais 5,99 € ou domicile 9,59 €.</p>
+    </div>
+  </aside>
+
 </div></section>
-<script>
-document.querySelectorAll('[data-stripe]').forEach(function(a){var u=a.getAttribute('data-stripe');if(u){a.href=u;a.textContent='Commander';a.rel='noopener';}});
-document.querySelectorAll('[data-prix]').forEach(function(p){var v=p.getAttribute('data-prix');if(v)p.textContent=v;});
-</script>
 </main>
 <footer class="band"><div class="in">
   <span class="label">DUMB · dumbphones.fr</span>

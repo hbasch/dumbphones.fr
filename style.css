@@ -274,3 +274,21 @@ footer .label{border-top:0;padding-top:0}
 .options-kit{list-style:none;margin:0;padding:0;border-top:1px solid var(--encre);max-width:640px}
 .options-kit li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--encre)}
 .options-kit li span:last-child{font-family:var(--mono)}
+
+/* Croquis d'en-tête, fil d'Ariane, à lire aussi (nov. 2026) */
+.ariane{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}
+.ariane a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.ariane span[aria-current]{opacity:.8}
+.pagehead .in.a-croquis{position:relative;padding-right:clamp(0px,24vw,280px)}
+.croquis-tete{position:absolute;right:0;bottom:clamp(48px,8vw,104px);width:clamp(120px,18vw,230px);height:auto;max-height:80%}
+@media (max-width:760px){.pagehead .in.a-croquis{padding-right:0}.croquis-tete{position:static;order:-1;width:auto;height:110px;max-height:none;align-self:flex-start}}
+.carte .croquis-carte{height:96px;width:auto;align-self:flex-start}
+.a-lire{border-top:1px solid var(--encre);margin-top:28px;padding-top:20px;display:flex;flex-direction:column;gap:12px}
+.a-lire h2{margin-top:0}
+.a-lire ul{list-style:none;padding:0}
+.themes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.themes > div{border:2px solid var(--encre);box-shadow:6px 6px 0 var(--encre);padding:24px;display:flex;flex-direction:column;gap:10px;background:var(--papier)}
+.themes h3{font-family:var(--mono);font-size:clamp(20px,2vw,24px)}
+.themes ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px}
+.themes a{text-decoration:underline wavy var(--bic);text-decoration-thickness:2px;text-underline-offset:5px}
+@media (max-width:620px){.themes{grid-template-columns:minmax(0,1fr)}}

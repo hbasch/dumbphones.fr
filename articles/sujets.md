@@ -21,7 +21,7 @@ Prendre le premier sujet non coché, puis le cocher. Ajouter de nouveaux sujets 
 - [x] Écouter de la musique et des podcasts sans smartphone
 - [x] 30 jours sans smartphone : à quoi s'attendre semaine par semaine
 - [x] Mudita Kompakt, Light Phone III, Minimal Phone : les téléphones minimalistes haut de gamme comparés
-- [ ] Les billets de train et transports sans smartphone en France
+- [x] Les billets de train et transports sans smartphone en France
 - [ ] Ce que dit la recherche sur les écrans et l'attention
 - [ ] Le carnet papier : remplacer les notes, listes et agenda du téléphone
 

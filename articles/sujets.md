@@ -1,7 +1,19 @@
 # Sujets d'articles (file d'attente)
 Prendre le premier sujet non coché, puis le cocher. Ajouter de nouveaux sujets en bas quand la liste se vide.
 
-À chaque nouvel article, mettre aussi à jour : le bloc ARTICLES-ACCUEIL de /index.html (les 3 plus récents, le plus récent en haut, même format que la liste de /articles/), et /sitemap.xml (nouvelle URL + date). Titre de page : la question que les gens tapent dans Google, avec « 2026 » quand ça a du sens.
+À chaque nouvel article, mettre aussi à jour : le bloc ARTICLES-ACCUEIL de /index.html (les 3 plus récents, le plus récent en haut, même format que la liste de /articles/). Titre de page : la question que les gens tapent dans Google, avec « 2026 » quand ça a du sens, 60 caractères maximum.
+
+Structure d'un article (depuis le 12 novembre 2026, copier l'article le plus récent) :
+- En-tête : og:image (https://dumbphones.fr/img/og/<slug>.png) et og:image:alt, favicons, données structurées Article (auteur Person Hadrien Basch, publisher avec logo, image, datePublished et dateModified) et BreadcrumbList (Accueil, Articles, titre).
+- Bandeau : classe « in stack a-croquis », image <img class="croquis-tete" src="/img/croquis/<nom>.svg" alt="" width="160" height="160">, puis le fil d'Ariane. Croquis disponibles dans img/croquis/ ; pour en ajouter un, modifier _outils/croquis.py puis lancer python3 _outils/croquis.py.
+- Fin : bloc <aside class="a-lire"> « À lire aussi » (3 articles du même thème) et « Écrit par Hadrien Basch, fondateur de DUMB. ».
+- Fiche modèle (/telephones/<modele>/) : même gabarit, fil d'Ariane Accueil › Comparateur › modèle, lien depuis le comparateur via le champ avis du tableau T (pas le champ lien), puis recopier les cartes générées dans #cartes.
+
+Après l'article, lancer dans l'ordre :
+1. ajouter le slug au bon thème (THEMES) et son croquis (CROQUIS) dans _outils/donnees.py, puis python3 _outils/themes.py ;
+2. python3 _outils/og.py (crée l'image de partage manquante, Playwright est installé ; regarder l'image) ;
+3. python3 _outils/sitemap.py (régénère sitemap.xml, ne plus l'éditer à la main).
+Ces fichiers (_outils/, img/og/, sitemap.xml, articles/index.html) font partie des fichiers autorisés pour un article. Faire git pull --rebase avant de pousser.
 
 - [x] Téléphone sans internet pour un ado : lequel choisir en 2026
 - [x] Garder WhatsApp sans smartphone : toutes les options

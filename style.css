@@ -268,3 +268,9 @@ footer .label{border-top:0;padding-top:0}
 .cols > div:nth-child(3n+2){background:var(--kraft)}
 .cartes .carte:nth-child(4n+2){background:var(--kraft)}
 .tag.oui{background:var(--sauge);border-color:var(--encre);color:var(--encre)}
+
+.liste-kit{margin:0;padding-left:1.1em}
+.sous-titre{font-family:var(--mono);font-weight:700;font-size:clamp(20px,2vw,24px);margin:8px 0 0}
+.options-kit{list-style:none;margin:0;padding:0;border-top:1px solid var(--encre);max-width:640px}
+.options-kit li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--encre)}
+.options-kit li span:last-child{font-family:var(--mono)}

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Le kit DUMB : musette cousue main, carnet et stickers</title>
-<meta name="description" content="Le kit DUMB pour sortir sans écran : une musette cousue à la main en France, le carnet-guide et des stickers. Série numérotée, fabriquée à la commande.">
+<title>Le kit DUMB : musette cousue main, carnet, pochette anti-ondes</title>
+<meta name="description" content="Le kit DUMB pour sortir sans écran : une musette cousue à la main, le carnet-guide et une pochette anti-ondes. Série numérotée, fabriquée à la commande.">
 <link rel="canonical" href="https://dumbphones.fr/kit/">
 <meta property="og:title" content="Le kit DUMB · série n°1">
 <meta property="og:url" content="https://dumbphones.fr/kit/">
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="fr_FR">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Bowlby+One&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap">
-<link rel="stylesheet" href="/style.css?v=8">
+<link rel="stylesheet" href="/style.css?v=9">
 <script data-goatcounter="https://dumbphones.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <script src="/newsletter.js?v=3" defer></script>
 </head>
@@ -39,32 +39,40 @@
 
 <section class="band"><div class="in stack">
   <p class="label">Ce qu'il y a dedans</p>
-  <h2 class="sectitle">Trois choses, pas plus</h2>
+  <h2 class="sectitle">De quoi sortir sans écran</h2>
   <div class="cols">
-    <div><h3>La musette</h3><p>Un sac simple en tissu, avec une étiquette oversized. Assez grand pour le carnet, un livre, le reste de la journée.</p></div>
+    <div><h3>La musette</h3><p>Un sac simple en tissu, cousu à la main et numéroté. Assez grand pour le carnet, un livre, le reste de la journée.</p></div>
     <div><h3>Le carnet</h3><p>Le guide pour passer au dumbphone, et des pages pour noter, dessiner, préparer ses trajets.</p></div>
-    <div><h3>Les stickers</h3><p>Pour le carnet, l'ordi, le téléphone qui reste à la maison.</p></div>
+    <div><h3>La pochette anti-ondes</h3><p>Comme celles des lycées : le téléphone glissé dedans ne reçoit plus rien, ni appel ni notification, tant que la pochette est fermée.</p></div>
   </div>
 </div></section>
 
 <section class="band jaune" id="commander"><div class="in stack">
   <p class="label">Commander</p>
-  <h2 class="sectitle">Choisis ta version</h2>
-  <!-- OFFRES : pour chaque version, mettre le prix dans .prix et le lien Stripe dans href du bouton. Sans lien, le bouton renvoie vers la liste d'attente. -->
+  <h2 class="sectitle">Deux packs</h2>
+  <!-- PACKS : prix dans data-prix, lien Stripe dans data-stripe. Sans lien, le bouton renvoie vers la liste d'attente. -->
   <div class="cartes">
     <article class="carte">
-      <h3>Le kit complet</h3>
+      <h3>L'essentiel</h3>
       <p class="prix" data-prix="">Prix bientôt</p>
-      <p>Musette numérotée, carnet, stickers.</p>
+      <ul class="liste-kit"><li>La musette numérotée</li><li>Le carnet</li><li>La pochette anti-ondes</li></ul>
       <a class="btn plein" href="#attente" data-stripe="">Être prévenu</a>
     </article>
     <article class="carte">
-      <h3>La musette seule</h3>
+      <h3>Le complet</h3>
       <p class="prix" data-prix="">Prix bientôt</p>
-      <p>La musette numérotée, sans le carnet ni les stickers.</p>
+      <ul class="liste-kit"><li>Tout l'essentiel</li><li>Le stylo DUMB</li><li>La planche de stickers</li></ul>
       <a class="btn plein" href="#attente" data-stripe="">Être prévenu</a>
     </article>
   </div>
+  <h3 class="sous-titre">À ajouter au moment de payer</h3>
+  <!-- OPTIONS : prix dans data-prix. Elles s'ajoutent sur la page de paiement Stripe. -->
+  <ul class="options-kit">
+    <li><span>Le stylo DUMB</span><span data-prix="">prix bientôt</span></li>
+    <li><span>La planche de stickers</span><span data-prix="">prix bientôt</span></li>
+    <li><span>Une pochette anti-ondes en plus</span><span data-prix="">prix bientôt</span></li>
+    <li><span>Un carnet en plus</span><span data-prix="">prix bientôt</span></li>
+  </ul>
   <p class="note">Fabriqué à la commande : le délai d'expédition sera indiqué à l'ouverture de la série. Paiement sécurisé par carte. Tu as 14 jours après réception pour changer d'avis.</p>
 </div></section>
 

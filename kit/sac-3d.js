@@ -1,7 +1,8 @@
 // Visionneuse Gaussian splatting de la musette.
 // Le fichier est indiqué par data-src sur #sac-3d. Tant qu'il n'existe pas, on garde le texte d'attente.
 // La scène se charge quand le cadre arrive à l'écran, puis la caméra se balance toute seule
-// autour du sac (pas de contrôle à la souris).
+// autour du sac. Dès qu'on la touche (souris ou doigt), le balancier s'arrête et on tourne soi-même ;
+// il reprend tout seul après quelques secondes sans toucher.
 const figure = document.getElementById('sac-3d');
 const scene = figure && figure.querySelector('.kit-3d-scene');
 const nombres = (v, defaut) => (v || defaut).split(',').map(Number);
@@ -31,7 +32,7 @@ async function lancer(src) {
       sharedMemoryForWorkers: false, // GitHub Pages n'envoie pas les en-têtes COOP/COEP
       gpuAcceleratedSort: false,
       dynamicScene: false,
-      useBuiltInControls: false
+      useBuiltInControls: true
     });
     await viewer.addSplatScene(src, { showLoadingUI: false, progressiveLoad: true });
     scene.querySelector('.kit-3d-attente')?.remove();
@@ -40,10 +41,35 @@ async function lancer(src) {
     const ecart = new THREE.Vector3(...depart).sub(cible);
     const cote = new THREE.Vector3().crossVectors(haut, ecart).normalize();
     const calme = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const t0 = performance.now();
+    let t0 = performance.now();
+    let auto = true, minuteur;
+    const controles = viewer.controls;
+    if (controles) {
+      controles.target.copy(cible);
+      controles.enablePan = false;
+      controles.enableZoom = false;
+      controles.rotateSpeed = 0.5;
+    }
+    const prendreLaMain = () => { auto = false; clearTimeout(minuteur); };
+    const rendreLaMain = () => {
+      if (auto) return;
+      clearTimeout(minuteur);
+      minuteur = setTimeout(() => {
+        // on repart en balancier depuis la position où le visiteur a laissé la caméra
+        ecart.copy(viewer.camera.position).sub(cible);
+        cote.crossVectors(haut, ecart).normalize();
+        t0 = performance.now();
+        auto = true;
+      }, 4000);
+    };
+    scene.addEventListener('pointerdown', prendreLaMain);
+    addEventListener('pointerup', rendreLaMain);
+    addEventListener('pointercancel', rendreLaMain);
     const q = new THREE.Quaternion();
     const v = new THREE.Vector3();
     function bouger() {
+      requestAnimationFrame(bouger);
+      if (!auto) return;
       const t = calme ? 0 : (performance.now() - t0) / 1000;
       v.copy(ecart);
       q.setFromAxisAngle(haut, 0.45 * Math.sin(t * 0.35));
@@ -54,7 +80,6 @@ async function lancer(src) {
       viewer.camera.position.copy(cible).add(v);
       viewer.camera.up.copy(haut);
       viewer.camera.lookAt(cible);
-      requestAnimationFrame(bouger);
     }
     viewer.start();
     bouger();

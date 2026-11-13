@@ -35,7 +35,7 @@ Ces fichiers (_outils/, img/og/, sitemap.xml, articles/index.html) font partie d
 - [x] Mudita Kompakt, Light Phone III, Minimal Phone : les téléphones minimalistes haut de gamme comparés
 - [x] Les billets de train et transports sans smartphone en France
 - [x] Ce que dit la recherche sur les écrans et l'attention
-- [ ] Le carnet papier : remplacer les notes, listes et agenda du téléphone
+- [x] Le carnet papier : remplacer les notes, listes et agenda du téléphone
 
 ## Fiches modèles (une page par téléphone du comparateur, à faire après la file ci-dessus)
 Page /telephones/<modele>/ : avis, ce qui marche (WhatsApp, VoLTE, bandes 4G françaises, autonomie), prix relevé avec la date, pour qui, liens vers le comparateur. Ne mettre que des caractéristiques vérifiées sur la fiche du fabricant.

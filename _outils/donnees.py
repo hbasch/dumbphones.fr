@@ -13,6 +13,7 @@ CROQUIS = {
  "articles/rendre-iphone-ennuyeux": "smartphone",
  "articles/reveil-sans-telephone": "reveil",
  "articles/se-reperer-sans-gps": "carte",
+ "articles/smartphone-concentration-recherche": "sablier",
  "articles/telephone-portable-sans-internet": "touches",
  "articles/telephone-sans-internet-ado": "touches",
  "articles/telephone-senior": "clapet",
@@ -35,5 +36,5 @@ THEMES = [
  ("Choisir son téléphone", ["meilleurs-dumbphones-2026","telephone-portable-sans-internet","nokia-3210-ou-2660-flip","telephone-touches-whatsapp","mudita-light-phone-minimal-phone","volte-fin-2g-3g"]),
  ("Pour un enfant ou un proche", ["telephone-sans-internet-ado","telephone-senior","cadeaux-noel-decrocher"]),
  ("Vivre sans smartphone au quotidien", ["banque-sans-smartphone","whatsapp-sans-smartphone","double-authentification-sans-smartphone","billet-train-sans-smartphone","se-reperer-sans-gps","musique-podcasts-sans-smartphone","reveil-sans-telephone"]),
- ("Se lancer en douceur", ["30-jours-sans-smartphone","rendre-iphone-ennuyeux","rendre-android-ennuyeux"]),
+ ("Se lancer en douceur", ["30-jours-sans-smartphone","smartphone-concentration-recherche","rendre-iphone-ennuyeux","rendre-android-ennuyeux"]),
 ]

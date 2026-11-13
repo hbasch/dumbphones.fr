@@ -320,3 +320,15 @@ footer .label{border-top:0;padding-top:0}
 .kit-options li span:last-child{font-family:var(--mono)}
 .kit-port{margin:0;font-size:14px}
 @media (max-width:820px){.kit-tete .in,.kit-grille{grid-template-columns:1fr}.kit-colonne{position:static;order:-1}}
+
+/* le kit mis en avant */
+.kit-une-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(28px,5vw,64px);align-items:center}
+.kit-une-image{position:relative;background:var(--vieuxrose);border:2px solid var(--encre);box-shadow:8px 8px 0 var(--encre);padding:clamp(24px,5vw,56px);display:flex;justify-content:center}
+.kit-une-tampon{position:absolute;top:-18px;right:-12px;transform:rotate(6deg);background:var(--ocre);border:2px solid var(--encre);padding:8px 14px;font-family:var(--mono);font-weight:700;font-size:15px;line-height:1.2;text-align:center}
+.kit-une-prix{list-style:none;margin:0;padding:0;border-top:1px solid var(--encre);max-width:520px}
+.kit-une-prix li{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--encre)}
+.kit-une-prix li span:first-child{font-family:var(--mono);font-weight:700}
+.kit-une-prix strong{font-family:var(--affiche);font-weight:400;font-size:30px}
+.top a.lien-kit{background:var(--encre);color:var(--papier);padding:6px 12px;text-decoration:none}
+.top a.lien-kit:hover,.top a.lien-kit[aria-current="page"]{background:var(--bic);color:var(--papier);text-decoration:none}
+@media (max-width:760px){.kit-une-grille{grid-template-columns:1fr}.kit-une-tampon{right:4px}}

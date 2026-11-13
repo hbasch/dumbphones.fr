@@ -19,8 +19,8 @@ async function lancer(src) {
     const viewer = new GS.Viewer({
       rootElement: scene,
       cameraUp: [0, -1, 0],
-      initialCameraPosition: [0, -1, -4],
-      initialCameraLookAt: [0, 0, 0],
+      initialCameraPosition: (figure.dataset.camera || '0,-1,-4').split(',').map(Number),
+      initialCameraLookAt: (figure.dataset.cible || '0,0,0').split(',').map(Number),
       sharedMemoryForWorkers: false, // GitHub Pages n'envoie pas les en-têtes COOP/COEP
       gpuAcceleratedSort: false,
       dynamicScene: false,

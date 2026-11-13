@@ -336,7 +336,8 @@ footer .label{border-top:0;padding-top:0}
 /* Musette en 3D (gaussian splatting) */
 .kit-3d{margin:28px 0;border:2px solid var(--encre);background:var(--kraft)}
 .kit-3d-scene{position:relative;aspect-ratio:4/3;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 50% 45%,var(--papier),var(--kraft))}
-.kit-3d-scene canvas{position:absolute;inset:0;width:100%!important;height:100%!important;touch-action:none}
+.kit-3d-scene canvas{position:absolute;inset:0;width:100%!important;height:100%!important;touch-action:none;cursor:grab}
+.kit-3d-scene canvas:active{cursor:grabbing}
 .kit-3d-attente{font-family:var(--mono);margin:0;padding:16px;text-align:center}
 .kit-3d-bouton{font-family:var(--mono);font-size:16px;background:var(--encre);color:var(--papier);border:0;padding:14px 20px;cursor:pointer}
 .kit-3d-bouton:hover{background:var(--bic)}

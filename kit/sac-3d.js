@@ -46,11 +46,23 @@ async function lancer(src) {
     const controles = viewer.controls;
     if (controles) {
       controles.target.copy(cible);
+      const d = ecart.length();
       controles.enablePan = false;
-      controles.enableZoom = false;
-      controles.rotateSpeed = 0.5;
+      controles.enableDamping = true;   // la rotation glisse et s'arrête en douceur
+      controles.dampingFactor = 0.08;
+      controles.rotateSpeed = 0.9;
+      controles.zoomSpeed = 0.6;
+      controles.minDistance = d * 0.35;
+      controles.maxDistance = d * 2.2;
+      // Le zoom à la molette ne s'active qu'après un clic dans la scène, pour ne pas bloquer
+      // le défilement de la page. Au doigt, le pincement marche toujours.
+      controles.enableZoom = matchMedia('(pointer: coarse)').matches;
+      scene.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse') controles.enableZoom = false; });
     }
-    const prendreLaMain = () => { auto = false; clearTimeout(minuteur); };
+    const prendreLaMain = () => {
+      auto = false; clearTimeout(minuteur);
+      if (controles) controles.enableZoom = true;
+    };
     const rendreLaMain = () => {
       if (auto) return;
       clearTimeout(minuteur);
@@ -65,6 +77,7 @@ async function lancer(src) {
     scene.addEventListener('pointerdown', prendreLaMain);
     addEventListener('pointerup', rendreLaMain);
     addEventListener('pointercancel', rendreLaMain);
+    scene.addEventListener('wheel', () => { if (controles?.enableZoom) { prendreLaMain(); rendreLaMain(); } }, { passive: true });
     const q = new THREE.Quaternion();
     const v = new THREE.Vector3();
     function bouger() {

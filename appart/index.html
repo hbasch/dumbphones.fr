@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page privée</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Bowlby+One&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="/style.css?v=13">
+<style>
+.prive{max-width:760px;margin:0 auto;padding:48px 16px 80px}
+.prive h1{font-family:var(--affiche);font-weight:400;font-size:clamp(40px,8vw,80px);line-height:.9;margin:8px 0 16px}
+.prive .chapeau{font-size:20px;margin:0 0 24px}
+.porte{display:flex;flex-direction:column;gap:12px;max-width:420px;margin-top:24px}
+.porte input{font:inherit;font-size:18px;padding:12px 14px;border:2px solid var(--encre);background:var(--papier);color:var(--encre)}
+.porte button{font-family:var(--mono);font-size:16px;padding:14px;background:var(--encre);color:var(--papier);border:0;cursor:pointer}
+.porte .erreur{font-family:var(--mono);color:#a33;min-height:1.4em;margin:0}
+.prive video{width:100%;max-height:80vh;background:var(--encre);border:2px solid var(--encre);display:block}
+.prive .note{font-family:var(--mono);font-size:14px;margin-top:16px}
+</style>
+</head>
+<body>
+<main class="prive">
+  <div id="porte">
+    <p class="label">Page privée</p>
+    <h1>Code d'accès</h1>
+    <form class="porte" id="formulaire">
+      <label for="code">Entre le code qu'on t'a donné.</label>
+      <input id="code" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" required>
+      <button type="submit">Ouvrir</button>
+      <p class="erreur" id="erreur" role="alert"></p>
+    </form>
+  </div>
+  <div id="contenu" hidden></div>
+</main>
+<script>
+// Le contenu et la vidéo sont chiffrés (AES-GCM, clé tirée du code par PBKDF2).
+// Sans le code, ni le texte ni la vidéo ne sont lisibles, même en fouillant le site.
+const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+async function cle(code, sel, it) {
+  const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(code), 'PBKDF2', false, ['deriveKey']);
+  return crypto.subtle.deriveKey({ name: 'PBKDF2', salt: sel, iterations: it, hash: 'SHA-256' }, base, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+}
+const dechiffre = (k, b) => crypto.subtle.decrypt({ name: 'AES-GCM', iv: b.slice(0, 12) }, k, b.slice(12));
+
+async function ouvrir(code) {
+  const coffre = await (await fetch('coffre.json', { cache: 'no-store' })).json();
+  const k = await cle(code.trim().toLowerCase(), b64(coffre.sel), coffre.it);
+  const html = new TextDecoder().decode(await dechiffre(k, b64(coffre.html)));
+  const boite = document.getElementById('contenu');
+  boite.innerHTML = html;
+  boite.hidden = false;
+  document.getElementById('porte').hidden = true;
+  try { sessionStorage.setItem('appart', code); } catch (e) {}
+  const video = document.getElementById('visite');
+  if (video) {
+    video.insertAdjacentHTML('afterend', '<p class="note" id="charge">Chargement de la vidéo…</p>');
+    const brut = new Uint8Array(await (await fetch('visite.bin', { cache: 'no-store' })).arrayBuffer());
+    video.src = URL.createObjectURL(new Blob([await dechiffre(k, brut)], { type: 'video/mp4' }));
+    document.getElementById('charge').remove();
+  }
+}
+
+document.getElementById('formulaire').addEventListener('submit', async e => {
+  e.preventDefault();
+  const erreur = document.getElementById('erreur');
+  erreur.textContent = '';
+  try { await ouvrir(document.getElementById('code').value); }
+  catch (err) { erreur.textContent = 'Code incorrect.'; }
+});
+try { const c = sessionStorage.getItem('appart'); if (c) ouvrir(c).catch(() => {}); } catch (e) {}
+</script>
+</body>
+</html>

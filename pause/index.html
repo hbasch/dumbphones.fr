@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pause : le minuteur de la pastille · DUMB</title>
+<meta name="description" content="Pose ton téléphone sur la pastille du sac : le chrono démarre. Reprends-le : tu vois combien de temps tu as tenu sans écran.">
+<link rel="canonical" href="https://dumbphones.fr/pause/">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F3EDE2">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Bowlby+One&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="/style.css?v=14">
+<style>
+.pause-ecran{min-height:72vh;display:flex;flex-direction:column;justify-content:center;gap:18px;text-align:center;align-items:center}
+.pause-ecran h1{font-family:var(--affiche);font-weight:400;font-size:clamp(44px,11vw,96px);line-height:.92;margin:0}
+.pause-chrono{font-family:var(--affiche);font-size:clamp(64px,19vw,168px);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin:0}
+.pause-sous{font-family:var(--mono);font-size:18px;margin:0}
+.pause-ecran .btn{font-size:18px;min-height:52px;padding:14px 26px}
+.pause-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;width:100%;max-width:560px;margin-top:8px}
+.pause-stats div{border:2px solid var(--encre);background:var(--papier);padding:12px 8px;display:flex;flex-direction:column;gap:4px}
+.pause-stats b{font-family:var(--affiche);font-weight:400;font-size:26px}
+.pause-stats span{font-family:var(--mono);font-size:13px}
+.pause-liste{list-style:none;padding:0;margin:0;font-family:var(--mono);font-size:15px;width:100%;max-width:560px;text-align:left}
+.pause-liste li{display:flex;justify-content:space-between;border-bottom:1px dashed var(--encre);padding:8px 2px}
+.pause-lien{background:none;border:0;font:inherit;font-family:var(--mono);font-size:14px;text-decoration:underline;color:inherit;cursor:pointer;padding:8px}
+.pause-reglage h3{font-family:var(--affiche);font-weight:400;font-size:26px;margin:10px 0 0}
+@media (max-width:520px){.pause-stats{grid-template-columns:1fr 1fr 1fr}.pause-stats b{font-size:20px}}
+</style>
+</head>
+<body>
+<header class="band top"><div class="in">
+  <a class="marque" href="/">DUMB</a>
+  <nav aria-label="Navigation principale">
+    <a href="/">Le projet</a>
+    <a href="/guide/">Guide</a>
+    <a class="lien-kit" href="/kit/">Le kit</a>
+  </nav>
+</div></header>
+<main>
+
+<section class="band jaune" id="ecran-repos"><div class="in pause-ecran">
+  <p class="label">La pastille du sac</p>
+  <h1>Range ton téléphone.</h1>
+  <p class="pause-sous">Le chrono démarre quand tu poses ton téléphone sur la pastille.</p>
+  <button class="btn plein" type="button" id="b-demarrer">Démarrer sans pastille</button>
+</div></section>
+
+<section class="band bleu" id="ecran-pause" hidden><div class="in pause-ecran">
+  <p class="label">Sans téléphone depuis</p>
+  <p class="pause-chrono" id="chrono" aria-live="off">0:00:00</p>
+  <p class="pause-sous" id="debut"></p>
+  <p class="pause-sous">Repose ton téléphone sur la pastille quand tu le reprends.</p>
+  <button class="btn" type="button" id="b-arreter">Arrêter</button>
+</div></section>
+
+<section class="band rose" id="ecran-fin" hidden><div class="in pause-ecran">
+  <p class="label">Pause terminée</p>
+  <h1 id="fin-titre">1 h 12 sans téléphone.</h1>
+  <p class="pause-sous" id="fin-detail"></p>
+  <div class="pause-stats">
+    <div><b id="s-jour">0</b><span>aujourd'hui</span></div>
+    <div><b id="s-semaine">0</b><span>cette semaine</span></div>
+    <div><b id="s-record">0</b><span>record</span></div>
+  </div>
+  <button class="btn plein" type="button" id="b-encore">Une autre pause</button>
+</div></section>
+
+<section class="band"><div class="in stack">
+  <p class="label">Tes pauses</p>
+  <ul class="pause-liste" id="historique"><li><span>Aucune pause pour l'instant.</span></li></ul>
+  <p class="pause-sous" style="font-size:13px">Tout reste sur ton téléphone : rien n'est envoyé, on ne voit rien. <button class="pause-lien" type="button" id="b-effacer">Effacer l'historique</button></p>
+</div></section>
+
+<section class="band vert pause-reglage" id="reglage"><div class="in stack">
+  <p class="label">À faire une fois</p>
+  <h2 class="sectitle">Régler la pastille</h2>
+  <div class="prose">
+    <p>La pastille est cousue dans l'étiquette du sac. Pose le haut du dos de ton téléphone dessus : cette page s'ouvre et le chrono part. Pour qu'en plus ton téléphone passe en mode avion, règle-le une fois :</p>
+  </div>
+  <h3>iPhone (XS et plus récents)</h3>
+  <ol class="etapes">
+    <li><div><strong>Ouvre l'app Raccourcis</strong>Onglet Automatisation, puis « Nouvelle automatisation » et « NFC ».</div></li>
+    <li><div><strong>Scanne la pastille</strong>Touche « Scanner », pose le téléphone sur le sac, donne-lui un nom : « Pause ».</div></li>
+    <li><div><strong>Choisis l'action</strong>Ajoute « Mode Avion » (en mode « Basculer » si on te le propose, sinon « Activer »), et si tu veux un mode Concentration. Puis choisis « Exécuter immédiatement ».</div></li>
+  </ol>
+  <h3>Android</h3>
+  <ol class="etapes">
+    <li><div><strong>Rien à installer pour le chrono</strong>Active le NFC dans les réglages rapides : la pastille ouvre cette page toute seule.</div></li>
+    <li><div><strong>Pour couper les notifications</strong>Installe l'app gratuite NFC Tasks ou MacroDroid, et associe la pastille au mode « Ne pas déranger ».</div></li>
+    <li><div><strong>Le mode avion, à la main</strong>Android ne laisse aucune appli l'activer à ta place. Un geste dans les réglages rapides, et c'est fait.</div></li>
+  </ol>
+  <div class="prose"><p>Le chrono marche même en mode avion : la page reste enregistrée sur ton téléphone après la première ouverture.</p></div>
+</div></section>
+
+</main>
+<footer class="band"><div class="in">
+  <span class="label">DUMB · dumbphones.fr</span>
+  <a class="label" href="/kit/">Le kit</a>
+</div></footer>
+<script>
+(function () {
+  var CLE = 'dumb-pause';
+  var lire = function () { try { return JSON.parse(localStorage.getItem(CLE)) || { encours: null, pauses: [] }; } catch (e) { return { encours: null, pauses: [] }; } };
+  var ecrire = function (d) { try { localStorage.setItem(CLE, JSON.stringify(d)); } catch (e) {} };
+  var $ = function (id) { return document.getElementById(id); };
+  var deux = function (n) { return (n < 10 ? '0' : '') + n; };
+  var duree = function (ms) {
+    var m = Math.round(ms / 60000);
+    if (m < 1) return 'moins d’une minute';
+    if (m < 60) return m + ' min';
+    return Math.floor(m / 60) + ' h ' + deux(m % 60);
+  };
+  var heure = function (t) { var d = new Date(t); return d.getHours() + ' h ' + deux(d.getMinutes()); };
+  var jour = function (t) { return new Date(t).toLocaleDateString('fr-FR', { weekday: 'short', day: 'numeric', month: 'short' }); };
+  var minuteur;
+
+  function afficher(ecran) {
+    ['ecran-repos', 'ecran-pause', 'ecran-fin'].forEach(function (id) { $(id).hidden = id !== ecran; });
+  }
+
+  function historique(d) {
+    var ul = $('historique');
+    if (!d.pauses.length) { ul.innerHTML = '<li><span>Aucune pause pour l’instant.</span></li>'; return; }
+    ul.innerHTML = '';
+    d.pauses.slice(-15).reverse().forEach(function (p) {
+      var li = document.createElement('li');
+      var a = document.createElement('span'); a.textContent = jour(p.debut) + ', ' + heure(p.debut);
+      var b = document.createElement('span'); b.textContent = duree(p.fin - p.debut);
+      li.appendChild(a); li.appendChild(b); ul.appendChild(li);
+    });
+  }
+
+  function stats(d) {
+    var maintenant = new Date(), debutJour = new Date(maintenant.getFullYear(), maintenant.getMonth(), maintenant.getDate()).getTime();
+    var debutSemaine = debutJour - ((maintenant.getDay() + 6) % 7) * 864e5;
+    var tj = 0, ts = 0, rec = 0;
+    d.pauses.forEach(function (p) {
+      var t = p.fin - p.debut;
+      if (p.debut >= debutJour) tj += t;
+      if (p.debut >= debutSemaine) ts += t;
+      if (t > rec) rec = t;
+    });
+    $('s-jour').textContent = duree(tj); $('s-semaine').textContent = duree(ts); $('s-record').textContent = duree(rec);
+  }
+
+  function tic() {
+    var d = lire(); if (!d.encours) return;
+    var s = Math.floor((Date.now() - d.encours) / 1000);
+    $('chrono').textContent = Math.floor(s / 3600) + ':' + deux(Math.floor(s / 60) % 60) + ':' + deux(s % 60);
+  }
+
+  function demarrer() {
+    var d = lire(); d.encours = Date.now(); ecrire(d);
+    $('debut').textContent = 'Depuis ' + heure(d.encours);
+    afficher('ecran-pause'); tic(); clearInterval(minuteur); minuteur = setInterval(tic, 1000);
+    try { history.replaceState(null, '', location.pathname); } catch (e) {}
+  }
+
+  function arreter() {
+    var d = lire(); if (!d.encours) return;
+    var p = { debut: d.encours, fin: Date.now() };
+    d.encours = null;
+    if (p.fin - p.debut >= 60000) d.pauses.push(p);
+    d.pauses = d.pauses.slice(-500);
+    ecrire(d); clearInterval(minuteur);
+    $('fin-titre').textContent = duree(p.fin - p.debut) + ' sans téléphone.';
+    $('fin-detail').textContent = 'De ' + heure(p.debut) + ' à ' + heure(p.fin) + (p.fin - p.debut < 60000 ? ' (trop court pour compter)' : '');
+    stats(d); historique(d); afficher('ecran-fin');
+    try { history.replaceState(null, '', location.pathname); } catch (e) {}
+  }
+
+  $('b-demarrer').addEventListener('click', demarrer);
+  $('b-arreter').addEventListener('click', arreter);
+  $('b-encore').addEventListener('click', demarrer);
+  $('b-effacer').addEventListener('click', function () { var d = lire(); d.pauses = []; ecrire(d); historique(d); stats(d); });
+
+  // Arrivée depuis la pastille (?nfc) : un scan démarre, le scan suivant arrête.
+  // Deux ouvertures en moins de 20 s (scan en double) ne comptent que pour une.
+  var d = lire();
+  var depuisPastille = /[?&]nfc\b/.test(location.search);
+  historique(d); stats(d);
+  if (d.encours) {
+    if (depuisPastille && Date.now() - d.encours > 20000) arreter();
+    else { $('debut').textContent = 'Depuis ' + heure(d.encours); afficher('ecran-pause'); tic(); minuteur = setInterval(tic, 1000); }
+  } else if (depuisPastille) {
+    var derniere = d.pauses[d.pauses.length - 1];
+    if (!derniere || Date.now() - derniere.fin > 20000) demarrer();
+  }
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) tic(); });
+
+  if ('serviceWorker' in navigator) { try { navigator.serviceWorker.register('/pause/sw.js', { scope: '/pause/' }); } catch (e) {} }
+})();
+</script>
+</body>
+</html>

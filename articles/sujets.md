@@ -40,7 +40,7 @@ Ces fichiers (_outils/, img/og/, sitemap.xml, articles/index.html) font partie d
 ## Fiches modèles (une page par téléphone du comparateur, à faire après la file ci-dessus)
 Page /telephones/<modele>/ : avis, ce qui marche (WhatsApp, VoLTE, bandes 4G françaises, autonomie), prix relevé avec la date, pour qui, liens vers le comparateur. Ne mettre que des caractéristiques vérifiées sur la fiche du fabricant.
 - [x] Nokia 2660 Flip
-- [ ] Nokia 3210 4G
+- [x] Nokia 3210 4G
 - [ ] Crosscall Core-S5
 - [ ] Qin F21 Pro
 - [ ] Mudita Kompakt

@@ -22,6 +22,7 @@ CROQUIS = {
  "articles/volte-fin-2g-3g": "touches",
  "articles/whatsapp-sans-smartphone": "message",
  "telephones/nokia-2660-flip": "clapet",
+ "telephones/nokia-3210-4g": "touches",
  "articles": "carnet",
  "comparateur": "touches",
  "guide": "carte",

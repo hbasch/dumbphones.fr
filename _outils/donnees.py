@@ -23,6 +23,7 @@ CROQUIS = {
  "articles/whatsapp-sans-smartphone": "message",
  "telephones/nokia-2660-flip": "clapet",
  "telephones/nokia-3210-4g": "touches",
+ "telephones/crosscall-core-s5": "touches",
  "articles": "carnet",
  "comparateur": "touches",
  "guide": "carte",

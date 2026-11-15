@@ -41,7 +41,7 @@ Ces fichiers (_outils/, img/og/, sitemap.xml, articles/index.html) font partie d
 Page /telephones/<modele>/ : avis, ce qui marche (WhatsApp, VoLTE, bandes 4G françaises, autonomie), prix relevé avec la date, pour qui, liens vers le comparateur. Ne mettre que des caractéristiques vérifiées sur la fiche du fabricant.
 - [x] Nokia 2660 Flip
 - [x] Nokia 3210 4G
-- [ ] Crosscall Core-S5
+- [x] Crosscall Core-S5
 - [ ] Qin F21 Pro
 - [ ] Mudita Kompakt
 - [ ] Light Phone III

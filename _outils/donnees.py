@@ -24,6 +24,7 @@ CROQUIS = {
  "telephones/nokia-2660-flip": "clapet",
  "telephones/nokia-3210-4g": "touches",
  "telephones/crosscall-core-s5": "touches",
+ "telephones/qin-f21-pro": "tactile",
  "articles": "carnet",
  "comparateur": "touches",
  "guide": "carte",

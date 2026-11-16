@@ -42,6 +42,6 @@ Page /telephones/<modele>/ : avis, ce qui marche (WhatsApp, VoLTE, bandes 4G fra
 - [x] Nokia 2660 Flip
 - [x] Nokia 3210 4G
 - [x] Crosscall Core-S5
-- [ ] Qin F21 Pro
+- [x] Qin F21 Pro
 - [ ] Mudita Kompakt
 - [ ] Light Phone III

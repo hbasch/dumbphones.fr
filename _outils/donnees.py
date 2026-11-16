@@ -25,6 +25,7 @@ CROQUIS = {
  "telephones/nokia-3210-4g": "touches",
  "telephones/crosscall-core-s5": "touches",
  "telephones/qin-f21-pro": "tactile",
+ "telephones/mudita-kompakt": "tactile",
  "articles": "carnet",
  "comparateur": "touches",
  "guide": "carte",

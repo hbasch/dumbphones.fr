@@ -43,5 +43,5 @@ Page /telephones/<modele>/ : avis, ce qui marche (WhatsApp, VoLTE, bandes 4G fra
 - [x] Nokia 3210 4G
 - [x] Crosscall Core-S5
 - [x] Qin F21 Pro
-- [ ] Mudita Kompakt
+- [x] Mudita Kompakt
 - [ ] Light Phone III

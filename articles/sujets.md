@@ -37,6 +37,18 @@ Ces fichiers (_outils/, img/og/, sitemap.xml, articles/index.html) font partie d
 - [x] Ce que dit la recherche sur les écrans et l'attention
 - [x] Le carnet papier : remplacer les notes, listes et agenda du téléphone
 
+## Nouveaux sujets (ajoutés le 17 novembre 2026)
+- [x] Transférer ses contacts d'un smartphone vers un téléphone à touches (Android, iPhone)
+- [ ] Deux téléphones, un seul numéro : SIM multiple, renvoi d'appel, eSIM
+- [ ] Portable au collège en 2026 : ce que dit la « pause numérique »
+- [ ] Quel forfait mobile pour un téléphone à touches en 2026
+- [ ] À quel âge donner un premier téléphone à son enfant : les recommandations françaises
+- [ ] Faire des photos sans smartphone : compact, jetable ou téléphone à touches
+- [ ] Payer le stationnement sans appli : horodateur, SMS, carte
+- [ ] Partager sa connexion depuis un téléphone simple pour l'ordinateur
+- [ ] Écrire des SMS vite sur un téléphone à touches : T9 et astuces
+- [ ] Un week-end sans téléphone en famille : comment l'organiser
+
 ## Fiches modèles (une page par téléphone du comparateur, à faire après la file ci-dessus)
 Page /telephones/<modele>/ : avis, ce qui marche (WhatsApp, VoLTE, bandes 4G françaises, autonomie), prix relevé avec la date, pour qui, liens vers le comparateur. Ne mettre que des caractéristiques vérifiées sur la fiche du fabricant.
 - [x] Nokia 2660 Flip

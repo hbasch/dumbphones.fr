@@ -26,6 +26,7 @@ CROQUIS = {
  "telephones/crosscall-core-s5": "touches",
  "telephones/qin-f21-pro": "tactile",
  "telephones/mudita-kompakt": "tactile",
+ "telephones/light-phone-iii": "tactile",
  "articles": "carnet",
  "comparateur": "touches",
  "guide": "carte",

@@ -23,6 +23,7 @@ CROQUIS = {
  "articles/whatsapp-sans-smartphone": "message",
  "articles/transferer-contacts-telephone-touches": "touches",
  "articles/deux-telephones-un-numero": "touches",
+ "articles/portable-college-pause-numerique": "cadenas",
  "telephones/nokia-2660-flip": "clapet",
  "telephones/nokia-3210-4g": "touches",
  "telephones/crosscall-core-s5": "touches",
@@ -43,7 +44,7 @@ CROQUIS = {
 # Thèmes de la page /articles/ (ordre d'affichage). Ajouter chaque nouvel article à un thème.
 THEMES = [
  ("Choisir son téléphone", ["meilleurs-dumbphones-2026","telephone-portable-sans-internet","nokia-3210-ou-2660-flip","telephone-touches-whatsapp","mudita-light-phone-minimal-phone","volte-fin-2g-3g"]),
- ("Pour un enfant ou un proche", ["telephone-sans-internet-ado","telephone-senior","cadeaux-noel-decrocher"]),
+ ("Pour un enfant ou un proche", ["telephone-sans-internet-ado","telephone-senior","cadeaux-noel-decrocher","portable-college-pause-numerique"]),
  ("Vivre sans smartphone au quotidien", ["banque-sans-smartphone","whatsapp-sans-smartphone","double-authentification-sans-smartphone","billet-train-sans-smartphone","se-reperer-sans-gps","musique-podcasts-sans-smartphone","reveil-sans-telephone","carnet-papier-notes-agenda","transferer-contacts-telephone-touches","deux-telephones-un-numero"]),
  ("Se lancer en douceur", ["30-jours-sans-smartphone","smartphone-concentration-recherche","rendre-iphone-ennuyeux","rendre-android-ennuyeux"]),
 ]

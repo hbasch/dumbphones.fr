@@ -41,7 +41,7 @@ Ces fichiers (_outils/, img/og/, sitemap.xml, articles/index.html) font partie d
 - [x] Transférer ses contacts d'un smartphone vers un téléphone à touches (Android, iPhone)
 - [x] Deux téléphones, un seul numéro : SIM multiple, renvoi d'appel, eSIM
 - [x] Portable au collège en 2026 : ce que dit la « pause numérique »
-- [ ] Quel forfait mobile pour un téléphone à touches en 2026
+- [x] Quel forfait mobile pour un téléphone à touches en 2026
 - [ ] À quel âge donner un premier téléphone à son enfant : les recommandations françaises
 - [ ] Faire des photos sans smartphone : compact, jetable ou téléphone à touches
 - [ ] Payer le stationnement sans appli : horodateur, SMS, carte
